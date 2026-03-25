@@ -9,5 +9,10 @@ Services :  Organisation des réunions (forêt;gymnase;etc.)\
 Goodies (logo sur chaque produit) : pins, stylo, porte clé, gourde, mug, vêtements, tupperware,coque de téléphone, trousse, sac à dos, cahiers, tables,chaise ergonomique, produit audio,tapis de course, peluche, lunette (logo), costume godzilla.\
 conseils : pdf aléatoire\
 
+TO DO LISTS : \
+
 Rick roll lors du clic sur l'horloge\
 alert à chaque fin de la slide du slogan\
+jeu (cps : 10 pendant 5 sec )?\ 
+inderdit de coller sur le formulaire
+
