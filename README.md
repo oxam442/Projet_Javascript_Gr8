@@ -5,6 +5,9 @@ Conseils de Co-Walking : "_Un jour, un mec est arrivé et a dit : « Vous voyez 
 couleurs : orange, jaune, bleu nuit, noir \
 slogan : Walk. Talk. Rawr \
 Produits : \
-vente :  Organisation des réunions (forêt;gymnase;etc.)\
-goodies : pins, stylo, porte clé, gourde, mug, vêtements, tupperware,coque de téléphone, trousse, sac à dos, cahiers, tables,chaise ergonomique, produit audio,tapis de course, peluche, lunette (logo).\
-conseils : pdf aléatoire
+Services :  Organisation des réunions (forêt;gymnase;etc.)\
+Goodies (logo sur chaque produit) : pins, stylo, porte clé, gourde, mug, vêtements, tupperware,coque de téléphone, trousse, sac à dos, cahiers, tables,chaise ergonomique, produit audio,tapis de course, peluche, lunette (logo), costume godzilla.\
+conseils : pdf aléatoire\
+
+Rick roll lors du clic sur l'horloge\
+alert à chaque fin de la slide du slogan\
