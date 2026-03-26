@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../scripts/produit.js" defer></script>
+    <title>Produits/services</title>
+    <style>
+        .container {
+            display: flex;            /* Active le modèle de boîte flexible */
+            justify-content: space-around; /* Espace entre les éléments */
+            margin: 20px;
+        }
+        .box {
+            width: 200px;            /* Largeur de chaque boîte */
+            height: 250px;           /* Hauteur de chaque boîte */
+            padding: 10px;
+            border: 2px solid gray;
+            background-color: lightyellow;
+            transition: all 0.2s;
+            
+        }
+        .box:hover{
+            height: 300px;
+        }
+        .box img {
+            width: 200px;            
+            height: 200px; 
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="1">
+            <img src="../logo.png" id="img1" onclick="changeImg()"></img> <!-- faire avec le js-->
+            <div style="font-weight: bold; margin-bottom: 3%;">5€ unité</div>
+            <div style="margin-bottom: 3%;">Pins CoWalkZilla</div> 
+            <button id="button" onclick="ColorButton()">ACHETER</button>
+        </div>
+        <div class="box">Boîte 2</div>
+        <div class="box">Boîte 3</div>
+    </div>
+
+</body>
+</html>
