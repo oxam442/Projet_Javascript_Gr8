@@ -23,6 +23,14 @@
         .box:hover{
             height: 300px;
         }
+
+        #button{
+            opacity: 0;
+            font-size: medium;
+        }
+        .box:hover #button{
+            opacity: 1;
+        }
         .box img {
             width: 200px;            
             height: 200px; 
@@ -31,17 +39,18 @@
     </style>
 
 </head>
-<body>
+<body id="haut">
     <div class="container">
         <div class="box" id="1">
             <img src="../logo.png" id="img1" onclick="changeImg()"></img> <!-- faire avec le js-->
             <div style="font-weight: bold; margin-bottom: 3%;">5€ unité</div>
-            <div style="margin-bottom: 3%;">Pins CoWalkZilla</div> 
-            <button id="button" onclick="ColorButton()">ACHETER</button>
+            <div style="margin-bottom: 10%;">Pins CoWalkZilla</div> 
+            <button id="button" onclick="achat()" >ACHETER</button>
         </div>
         <div class="box">Boîte 2</div>
         <div class="box">Boîte 3</div>
     </div>
-
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <a href="#haut"><button id="flechehaut">vers le haut ⬆</button></a>
 </body>
 </html>

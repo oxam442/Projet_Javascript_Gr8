@@ -1,8 +1,4 @@
-function ColorButton() {
-    let color = `blue`;
-    let button=document.getElementById("button");
-    button.style.backgroundColor=  color;
-}
+
 function changeImg(){
     let img= document.getElementById("img1");
     let src = img.src; 
@@ -13,3 +9,18 @@ function changeImg(){
         img.src="../logo.png";
     }
 }
+
+function achat(){
+    let largeur = 600;
+    let hauteur = 400;
+
+    let left = (window.screen.width - largeur) / 2;
+    let top = (window.screen.height - hauteur) / 2;
+
+    window.open(
+        "acheter.html",
+        "popup",
+        `width=${largeur},height=${hauteur},left=${left},top=${top}`
+    );
+}
+ 
