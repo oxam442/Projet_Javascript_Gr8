@@ -1,0 +1,29 @@
+.container {
+    display: flex;            /* Active le modèle de boîte flexible */
+    justify-content: space-around; /* Espace entre les éléments */
+    margin: 20px;
+}
+.box {
+    width: 200px;            /* Largeur de chaque boîte */
+    height: 250px;           /* Hauteur de chaque boîte */
+    padding: 10px;
+    border: 2px solid gray;
+    background-color: lightyellow;
+    transition: all 0.2s;     
+}
+.box:hover{
+    height: 300px;
+}
+
+#button{
+    opacity: 0;
+    font-size: medium;
+}
+.box:hover #button{
+    opacity: 1;
+}
+.box img {
+    width: 200px;            
+    height: 200px; 
+    text-align: center;
+}
