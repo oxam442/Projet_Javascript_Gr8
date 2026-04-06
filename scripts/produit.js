@@ -3,10 +3,10 @@ function changeImg(){
     let img= document.getElementById("img1");
     let src = img.src; 
     if (src.includes("logo.png")){
-        img.src="../pins1.png";
+        img.src="../images/pins1.png";
     }
     else{
-        img.src="../logo.png";
+        img.src="../images/logo.png";
     }
 }
 
