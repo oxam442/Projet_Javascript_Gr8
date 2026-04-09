@@ -7,4 +7,4 @@ document.getElementById("texte").addEventListener("copy", function() {
         "width=400,height=300"
     );
 
-});
+}); 

@@ -1,13 +1,30 @@
-#navBar {
-    background-color:black;
+body {
+    background: linear-gradient(
+        to bottom,
+        #6b6f8e 0%,
+        #8f84b5 10%,
+        #b497c9 30%,
+        #d6a9b5 60%,
+        #e7c3a1 90%
+    );
 }
-#navBar td {
-    padding: 40px;
+#menu{
+    width: 80%;
+    height: 80px;
+    background-color: #0e1f5a;
+    border-radius: 45px;
+    margin: 40px auto;
+    margin-top: 25px;
     font-size: large;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+
 }
 
-#navBar td a{
+#menu a{
     font-size: large;
     color: white;
     text-decoration: none;
