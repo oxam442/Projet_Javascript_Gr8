@@ -1,13 +1,4 @@
-body {
-    background: linear-gradient(
-        to bottom,
-        #6b6f8e 0%,
-        #8f84b5 10%,
-        #b497c9 30%,
-        #d6a9b5 60%,
-        #e7c3a1 90%
-    );
-}
+/* barre */
 #menu{
     width: 80%;
     height: 80px;
@@ -29,32 +20,72 @@ body {
     color: white;
     text-decoration: none;
 }
+
+/* page */
+body {
+    background: linear-gradient(
+        to bottom,
+        #6b6f8e 0%,
+        #8f84b5 10%,
+        #b497c9 30%,
+        #d6a9b5 60%,
+        #e7c3a1 90%
+    );
+}
+
 .container {
-    display: flex;            /* Active le modèle de boîte flexible */
-    justify-content: space-around; /* Espace entre les éléments */
+    display: flex;
+    justify-content: center; 
     margin: 20px;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
 }
 .box {
-    width: 200px;            /* Largeur de chaque boîte */
-    height: 250px;           /* Hauteur de chaque boîte */
+    width: 125px; 
+    height: 235px; 
     padding: 10px;
-    border: 2px solid gray;
-    background-color: lightyellow;
-    transition: all 0.2s;     
+    font-size: 15px;
+    background-color: #0e1f5a;
+    border: 2px solid #e9760b;
+    border-radius: 15px;
+    color: white;
+    transition: all 0.2s; 
+    font-family: Arial;    
 }
-.box:hover{
-    height: 300px;
+.box img {
+    width: 125px;            
+    height: 125px; 
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #6b6f8e;
+}
+#prix {
+    font-weight: bold;
+    color: #e9760b;
+    margin-bottom: 10px;
 }
 
 #button{
-    opacity: 0;
-    font-size: medium;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    font-size: 15px;
+    background: linear-gradient(
+        to right,
+        #e9760b,
+        #e91d0b
+        
+    );
+    transition: 0.5s;
 }
-.box:hover #button{
-    opacity: 1;
+#button:hover{
+    transform: scale(1.05);
 }
-.box img {
-    width: 200px;            
-    height: 200px; 
-    text-align: center;
-}
+
+
