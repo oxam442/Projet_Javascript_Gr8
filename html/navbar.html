@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- Donnée de la page -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/navbar.css">
-    <script src="../scripts/navbar.js" defer></script>
+     <!-- fichier css -->
+    <link rel="stylesheet" href="../digitalClock.css">
+    <link rel="stylesheet" href="../styles/menu.css">
+    <!-- fichier js -->
+    <script src="../digitalClock.js" defer></script>
+    <script src="../scripts/menu.js" defer></script>
+    <!-- titre -->
     <title>Document</title> 
+    <link rel="stylesheet" href="../styles/navbar.css">
+
+    
 </head>
-<body>
+<body oncopy="alert('Attention au plagiat.')">
     <header>
         <div id="menu">
-            <img src="" alt=""> 
-            <a href="navbar.html" target="">ACCUEIL</a>
-            <a href="popup.html" target="">A PROPOS</a>
-            <a href="">PRODUITS/SERVICES</a>
-            <a href="">EQUIPE</a>
-            <a href="">CONTACT</a>
-            <a href="">NOUS TROUVER</a>
+            <!-- logo -->
+            <a href="accueil.html" onclick="changePage(event,this), background(this)">
+                <img src="../images/logo.png" id="logo"> 
+            </a>
+            <!-- lien vers la page : accueil -->
+            <a href="accueil.html" onclick="changePage(event,this), background(this)">ACCUEIL</a>
+            <!-- lien vers la page : A propos -->
+            <a href="propos.html" onclick="changePage(event,this), background(this)">A PROPOS</a>
+            <!-- lien vers la page : Produits/services -->
+            <a href="produit.html" onclick="changePage(event,this), background(this)">PRODUITS/SERVICES</a>
+            <!-- lien vers la page : Equipe -->
+            <a href="equipe.html" onclick="changePage(event,this), background(this)">EQUIPE</a>
+            <!-- lien vers la page : Contact -->
+            <a href="contact.html" onclick="changePage(event,this), background(this)">CONTACT</a>
+            <!-- lien vers la page : Nous trouver -->
+            <a href="api.html" onclick="changePage(event,this), background(this)">NOUS TROUVER</a>
+
+            <!-- horloge -->
+            <div id="clock" class="clock">
+                <div id="hours-tens"></div>
+                <div id="hours-units"></div>
+                <div id="colon" class="colon">:</div>
+                <div id="minutes-tens"></div>
+                <div id="minutes-units"></div>
+                <div></div>
+            </div>
         </div>
     </header>
 
-    <!-- <header>
-        <table id="navBar">
-            <tr>
-                <td id="navLogo"> 
-                    <img src="" alt=""> 
-                </td>
-                <td id="navAccueil">
-                    <a href="navbar.html" target="">ACCUEIL</a>
-                </td>
-                 
-                <td id="navPropos">
-                    <a href="popup.html" target="">A PROPOS</a>
-                </td>
-                <td id="navService">PRODUITS/SERVICES</td>
-                <td id="navEquipe">PRESENTATION EQUIPE</td>
-                <td id="navContact">CONTACT</td>
-                <td id="navTrouver">NOUS TROUVER</td>
-                <td id="navHorloge">horloge</td>
-            </tr>
-        </table>
-    </header> -->
-   <!--Popup test -->  
-    <!-- <p id="texte">
-  Sélectionnez ce texte et faites Ctrl+C pour copier.
-    </p> -->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- Popup de chargement d'une page -->
+    <div id="popup">
+        <div class="popupClass">
+            <p>Chargement en cours...</p>
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <!-- <footer>
         <table id="footer">
             <tr>

@@ -1,38 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Donnée de la page -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../scripts/produit.js" defer></script>
+    <!-- fichier css -->
+    <link rel="stylesheet" href="../digitalClock.css">
     <link rel="stylesheet" href="../styles/produit.css">
+    <link rel="stylesheet" href="../styles/menu.css">
+    <!-- fichier js -->
+    <script src="../scripts/produit.js" defer></script>
+    <script src="../digitalClock.js" defer></script>
+    <script src="../scripts/menu.js" defer></script>
+    <!-- titre -->
     <title>Produits/services</title>
-    
-
 </head>
+
+
+<!-- contenu de la page -->
+<body id="haut" oncopy="alert('Attention au plagiat.')">
+    <!-- en-tete de la page -->
     <header>
         <div id="menu">
-            <img src="" alt=""> 
-            <a href="navbar.html" target="">ACCUEIL</a>
-            <a href="popup.html" target="">A PROPOS</a>
-            <a href="">PRODUITS/SERVICES</a>
-            <a href="">EQUIPE</a>
-            <a href="">CONTACT</a>
-            <a href="">NOUS TROUVER</a>
+            <!-- logo -->
+            <a href="accueil.html" onclick="changePage(event,this), background(this)">
+                <img src="../images/logo.png" id="logo"> 
+            </a>
+            <!-- lien vers la page : accueil -->
+            <a href="accueil.html" onclick="changePage(event,this), background(this)">ACCUEIL</a>
+            <!-- lien vers la page : A propos -->
+            <a href="propos.html" onclick="changePage(event,this), background(this)">A PROPOS</a>
+            <!-- lien vers la page : Produits/services -->
+            <a href="produit.html" onclick="changePage(event,this), background(this)">PRODUITS/SERVICES</a>
+            <!-- lien vers la page : Equipe -->
+            <a href="equipe.html" onclick="changePage(event,this), background(this)">EQUIPE</a>
+            <!-- lien vers la page : Contact -->
+            <a href="contact.html" onclick="changePage(event,this), background(this)">CONTACT</a>
+            <!-- lien vers la page : Nous trouver -->
+            <a href="api.html" onclick="changePage(event,this), background(this)">NOUS TROUVER</a>
+
+            <!-- horloge -->
+            <div id="clock" class="clock">
+                <div id="hours-tens"></div>
+                <div id="hours-units"></div>
+                <div id="colon" class="colon">:</div>
+                <div id="minutes-tens"></div>
+                <div id="minutes-units"></div>
+                <div></div>
+            </div>
         </div>
     </header>
-<body id="haut">
 
+    <!-- Popup de chargement d'une page -->
+    <div id="popup">
+        <div class="popupClass">
+            <p>Chargement en cours...</p>
+            <div class="loader"></div>
+        </div>
+    </div>
+
+
+    <!-- Section des services -->
+
+    <!-- titre section service -->
+    <div class="titreSection">     
+        <span id="nomSection">Services</span>
+        <span id="nbArticle">3 articles</span>
+    </div>
+    <!-- éléments de la section service -->
     <div class="container">
+        <!-- Pins -->
         <div class="box">
-            <img src="../images/pin1.png" id="pin" data-nb="4" onclick="changeImg(this)"></img> <!-- faire avec le js dans le cas générale-->
+            <!-- image -->
+            <img src="../images/pin1.png" id="pin" data-nb="4" onclick="changeImg(this)"></img> 
+            <!-- nom produit -->
             <div>Pins CoWalkZilla</div> 
+            <!-- prix -->
             <div id="prix">5€ unité</div>
+            <!-- bouton acheté -->
             <button id="button" onclick="achat()" >🛒 ACHETER</button>
         </div>
-        <div class="box">Boîte 2</div>
-        <div class="box">Boîte 3</div>
+
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <a href="#haut"><button id="flechehaut">vers le haut ⬆</button></a>
+
+
+    <!-- Section des goodies -->
+
+    <!-- titre section goodies -->
+    <div class="titreSection"> 
+        <span id="nomSection">Goodies</span>
+        <span id="nbArticle">17 articles</span>
+    </div>
+    <!-- éléments de la section service -->
+    <div class="container">
+        <!-- Pins -->
+        <div class="box">
+            <!-- image -->
+            <img src="../images/pin1.png" id="pin" data-nb="4" onclick="changeImg(this)"></img> 
+            <!-- nom produit -->
+            <div>Pins CoWalkZilla</div> 
+            <!-- prix -->
+            <div id="prix">5€ unité</div>
+            <!-- bouton acheté -->
+            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+        </div>
+
+        <!-- stylo -->
+        <div class="box">
+            <!-- image -->
+            <img src="../images/stylo1.png" id="stylo" data-nb="2" onclick="changeImg(this)"></img> 
+            <!-- nom produit -->
+            <div>Stylo CoWalkZilla</div> 
+            <!-- prix -->
+            <div id="prix">2€ unité</div>
+            <!-- bouton acheté -->
+            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+        </div>
+
+        <!-- porte-clé -->
+        <div class="box">
+            <!-- image -->
+            <img src="../images/portecle1.png" id="portecle" data-nb="2" onclick="changeImg(this)"></img> 
+            <!-- nom produit -->
+            <div>Porte-clé CoWalkZilla</div> 
+            <!-- prix -->
+            <div id="prix">3€ unité</div>
+            <!-- bouton acheté -->
+            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+        </div>
+        
+        <!-- Gourde -->
+        <div class="box">
+            <!-- image -->
+            <img src="../images/gourde1.png" id="gourde" data-nb="2" onclick="changeImg(this)"></img> 
+            <!-- nom produit -->
+            <div>Gourde CoWalkZilla</div> 
+            <!-- prix -->
+            <div id="prix">15€ unité</div>
+            <!-- bouton acheté -->
+            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+        </div>
+                
+        <!-- Mug -->
+        <div class="box">
+            <!-- image -->
+            <img src="../images/mug1.png" id="mug" data-nb="2" onclick="changeImg(this)"></img> 
+            <!-- nom produit -->
+            <div>Mug CoWalkZilla</div> 
+            <!-- prix -->
+            <div id="prix">8€ unité</div>
+            <!-- bouton acheté -->
+            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+        </div>
+                
+        <!-- tapis de course -->
+        <div class="box">
+            <!-- image -->
+            <img src="../images/tapis1.png" id="tapis" data-nb="2" onclick="changeImg(this)"></img> 
+            <!-- nom produit -->
+            <div>Tapis de course CoWalkZilla</div> 
+            <!-- prix -->
+            <div id="prix">1000€ unité</div>
+            <!-- bouton acheté -->
+            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+        </div>
+                
+        <!-- trousse -->
+        <div class="box">
+            <!-- image -->
+            <img src="../images/trousse1.png" id="trousse" data-nb="2" onclick="changeImg(this)"></img> 
+            <!-- nom produit -->
+            <div>Ttrousse CoWalkZilla</div> 
+            <!-- prix -->
+            <div id="prix">20€ unité</div>
+            <!-- bouton acheté -->
+            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+        </div>
+                
+        <!-- Pins -->
+        <div class="box">
+            <!-- image -->
+            <img src="../images/pin1.png" id="pin" data-nb="4" onclick="changeImg(this)"></img> 
+            <!-- nom produit -->
+            <div>Pins CoWalkZilla</div> 
+            <!-- prix -->
+            <div id="prix">5€ unité</div>
+            <!-- bouton acheté -->
+            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+        </div>
+                
+        <!-- Pins -->
+        <div class="box">
+            <!-- image -->
+            <img src="../images/pin1.png" id="pin" data-nb="4" onclick="changeImg(this)"></img> 
+            <!-- nom produit -->
+            <div>Pins CoWalkZilla</div> 
+            <!-- prix -->
+            <div id="prix">5€ unité</div>
+            <!-- bouton acheté -->
+            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+        </div>
+                
+        <!-- Pins -->
+        <div class="box">
+            <!-- image -->
+            <img src="../images/pin1.png" id="pin" data-nb="4" onclick="changeImg(this)"></img> 
+            <!-- nom produit -->
+            <div>Pins CoWalkZilla</div> 
+            <!-- prix -->
+            <div id="prix">5€ unité</div>
+            <!-- bouton acheté -->
+            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+        </div>
+                
+        <!-- Pins -->
+        <div class="box">
+            <!-- image -->
+            <img src="../images/pin1.png" id="pin" data-nb="4" onclick="changeImg(this)"></img> 
+            <!-- nom produit -->
+            <div>Pins CoWalkZilla</div> 
+            <!-- prix -->
+            <div id="prix">5€ unité</div>
+            <!-- bouton acheté -->
+            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+        </div>
+                
+        <!-- Pins -->
+        <div class="box">
+            <!-- image -->
+            <img src="../images/pin1.png" id="pin" data-nb="4" onclick="changeImg(this)"></img> 
+            <!-- nom produit -->
+            <div>Pins CoWalkZilla</div> 
+            <!-- prix -->
+            <div id="prix">5€ unité</div>
+            <!-- bouton acheté -->
+            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+        </div>
+        
+        <!-- Pins -->
+        <div class="box">
+            <!-- image -->
+            <img src="../images/pin1.png" id="pin" data-nb="4" onclick="changeImg(this)"></img> 
+            <!-- nom produit -->
+            <div>Pins CoWalkZilla</div> 
+            <!-- prix -->
+            <div id="prix">5€ unité</div>
+            <!-- bouton acheté -->
+            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+        </div>
+                
+        <!-- Pins -->
+        <div class="box">
+            <!-- image -->
+            <img src="../images/pin1.png" id="pin" data-nb="4" onclick="changeImg(this)"></img> 
+            <!-- nom produit -->
+            <div>Pins CoWalkZilla</div> 
+            <!-- prix -->
+            <div id="prix">5€ unité</div>
+            <!-- bouton acheté -->
+            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+        </div>
+                
+        <!-- Pins -->
+        <div class="box">
+            <!-- image -->
+            <img src="../images/pin1.png" id="pin" data-nb="4" onclick="changeImg(this)"></img> 
+            <!-- nom produit -->
+            <div>Pins CoWalkZilla</div> 
+            <!-- prix -->
+            <div id="prix">5€ unité</div>
+            <!-- bouton acheté -->
+            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+        </div>
+                
+        <!-- Pins -->
+        <div class="box">
+            <!-- image -->
+            <img src="../images/pin1.png" id="pin" data-nb="4" onclick="changeImg(this)"></img> 
+            <!-- nom produit -->
+            <div>Pins CoWalkZilla</div> 
+            <!-- prix -->
+            <div id="prix">5€ unité</div>
+            <!-- bouton acheté -->
+            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+        </div>
+                
+        <!-- Pins -->
+        <div class="box">
+            <!-- image -->
+            <img src="../images/pin1.png" id="pin" data-nb="4" onclick="changeImg(this)"></img> 
+            <!-- nom produit -->
+            <div>Pins CoWalkZilla</div> 
+            <!-- prix -->
+            <div id="prix">5€ unité</div>
+            <!-- bouton acheté -->
+            <button onclick="achat()" >🛒 ACHETER</button>
+        </div>
+    </div>
+    <a href="#haut"><button id="">vers le haut ⬆</button></a>
 </body>
 </html>

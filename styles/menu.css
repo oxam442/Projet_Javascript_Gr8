@@ -1,0 +1,123 @@
+/* page */
+body {
+    /* couleur degrade du fond */
+    background: linear-gradient(
+        to bottom,
+        #6b6f8e 0%,
+        #8f84b5 10%,
+        #b497c9 30%,
+        #d6a9b5 60%,
+        #e7c3a1 90%
+    );
+}
+
+
+/* menu */
+#menu {
+    /* largeur */
+    width: 80%;
+    /* hauteur */
+    height: 80px;
+    /* couleur du fond */
+    background-color: #0e1f5a;
+    /* orrondi de la bordure */
+    border-radius: 45px;
+    /* marge */
+    margin: 20px auto;
+    /* marge en haut */
+    margin-top: 25px;
+    /* taille du texte en fonction de la taille de l'ecran */
+    font-size: 1.1vw;
+    /* définition du type de la boite */
+    display: flex;
+    /* alignement du texte horizontalement */
+    align-items: center;
+    /* alignement du texte verticalement */
+    justify-content: center;
+    /* espace entre chaque élément */
+    gap: 3%;
+}
+
+#menu a{
+    /* couleur texte */
+    color: white;
+    /* le texte n'est plus souligné */
+    text-decoration: none;
+}
+
+#menu a:hover {
+    /* couleur degrade du fond */
+    background: linear-gradient(
+        to right,
+        #e9760b,
+        #e91d0b  
+    );
+    /* zone de remplissage autour du contenu */
+    padding: 15px;
+    /* arrondi de la bordure */
+    border-radius: 6px;
+}
+
+#logo {
+    /* largeur en fonction de la taille de l'ecran */
+    width: clamp(5px,5vw,60px);
+    /* hauteur en fonction de la taille de l'ecran */
+    height: clamp(5px,5vw,60px);
+}
+
+
+/* popup chargement */
+#popup {
+    /* ne fait pas apparaitre le popup */
+    display: none;
+    /* alignement du texte verticalement */
+    justify-content: center;
+    /* alignement du texte horizontalement */
+    align-items: center;
+    /* largeur */
+    width: 100%;
+    /* hauteur */
+    height: 100%;
+    /* position du popup en (0,0) */
+    top: 0;
+    left: 0;
+    /* le popup est fixe */
+    position: fixed;
+    
+}
+
+.popupClass {
+    /* texte centré */
+    text-align: center;
+    /* taille texte */
+    font-size: 20px;
+    /* texte en gras */
+    font-weight: bold;
+    /* arrondi de la bordure */
+    border-radius: 10px;
+    /* zone de remplissage autour du contenu */
+    padding: 75px;
+    /* couleur du fond */
+    background: white;
+}
+
+/* Loader rond (trouvé sur internet) --> à refaire */
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+
