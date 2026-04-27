@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
 }
-
+/* vw */
 .segment0 { left: 4px; top: 1px; width: 12px; height: 0px; }
 .segment1 { left: 1px; top: 4px; width: 0px; height: 12px; }
 .segment2 { left: 19px; top: 4px; width: 0px; height: 12px; }

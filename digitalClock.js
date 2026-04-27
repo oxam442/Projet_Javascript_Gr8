@@ -1,21 +1,19 @@
-﻿// Adrien CHAMBRIER VITRE
-
-function addSegments(digitId){
-    // récupère dans une variable l'élément avec l'id de digitId
-    let digit= document.getElementById(digitId);
-    // On lui ajoute des enfants avec les classes "segmentN" dans des <div> pour afficher tous les segments
-    for (let i=0; i<7; i++){
-        // creation <div>
-        let segment = document.createElement("div");
-        // ajout classe
-        segment.className="segment"+i+" segment off";
-        // ajout du tag
+﻿function addSegments(digitId){
+    //  Get the right div
+    let digit = document.querySelector(`#${digitId}`)
+    for (let i = 0 ; i < 7; ++i ){
+        // Creates a div
+        const segment = document.createElement("div");
+        // Add the classes names
+        segment.classList += "segment";
+        segment.classList += ` segment${i}`;
+        segment.classList +=  " off";
+        // Appends the div
         digit.appendChild(segment);
     }
 }
 
 function updateDigit(digitId, value){
-    // liste des valeurs
     let segmentStates = [
         [1, 1, 1, 0, 1, 1, 1],
         [0, 0, 1, 0, 0, 1, 0],
@@ -23,45 +21,58 @@ function updateDigit(digitId, value){
         [1, 0, 1, 1, 0, 1, 1],
         [0, 1, 1, 1, 0, 1, 0],
         [1, 1, 0, 1, 0, 1, 1],
-        [1, 1, 0, 1, 1, 1, 1], 
+        [1, 1, 0, 1, 1, 1, 1],
         [1, 0, 1, 0, 0, 1, 0],
         [1, 1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 0, 1, 1]
     ];
-    // récupère dans une variable l'élément avec l'id de digitId
-    let digit = document.getElementById(digitId);
-    // variable pour l'état du segment
-    let state;
-    // ajout à chaque segment l'état à afficher 
-    for (let i =0;i<7;i++){
-        // savoir l'état du segment
+    // get the segments from the digit div
+    let digit = document.querySelector(`#${digitId}`)
+    let segments = digit.querySelectorAll(".segment")
+    // for each segments
+    for (let i = 0 ; i < 7 ; ++i){
+        // if the states of the segment is on remove "off"
         if (segmentStates[value][i]==1){
-            state="";
-        } 
-        else {
-            state=" off";
+            segments[i].classList.remove("off");
         }
-        // changement effectuer
-        digit.children[i].className="segment"+i+" segment" +state;
-    }
+        // Add "off"
+        else {
+            segments[i].classList.add("off");
+        }
+    } 
 }
- 
-// initialise l'heure
+
 function init(){
+    // Add the segments on each digits
     addSegments("hours-tens");
     addSegments("hours-units");
     addSegments("minutes-tens");
     addSegments("minutes-units");
 }
 
-
+function setTime(){
+    // Get the time
+    const time = new Date();
+    // Get the hours
+    const hours = time.toLocaleTimeString('fr-FR').split(":")[0]
+    // Get the minutes
+    const minutes = time.toLocaleTimeString('fr-FR').split(":")[1]
+    // Get the tens and the units to set the right value on each digit
+    updateDigit("hours-tens",hours.split("")[0])
+    updateDigit("hours-units",hours.split("")[1])
+    updateDigit("minutes-tens",minutes.split("")[0])
+    updateDigit("minutes-units",minutes.split("")[1])
+    
+}
 
 function main(){
     init();
-    //Pour modifier l'heure
-    updateDigit("hours-tens", 2);
-    updateDigit("hours-units", 3);
-    updateDigit("minutes-tens", 5);
-    updateDigit("minutes-units", 9);
+    // The time for the 1st time
+    setTime()
+    // Every minutes updates the time
+    setInterval(()=>setTime(),1000)
 }
+
+
+
 main();

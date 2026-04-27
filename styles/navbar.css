@@ -13,3 +13,94 @@
     height: 175px;
 }
 
+
+#confirm {
+    /* ne fait pas apparaitre le popup */
+    display: none;
+    /* alignement du texte verticalement */
+    justify-content: center;
+    /* alignement du texte horizontalement */
+    align-items: center;
+    /* largeur */
+    width: 100%;
+    /* hauteur */
+    height: 100%;
+    /* position du popup en (0,0) */
+    top: 0;
+    left: 0;
+    /* le popup est fixe */
+    position: fixed;
+    
+}
+
+.confirmClass {
+    /* texte centré */
+    text-align: center;
+    /* taille texte */
+    font-size: 20px;
+    /* texte en gras */
+    font-weight: bold;
+    /* arrondi de la bordure */
+    border-radius: 10px;
+    /* zone de remplissage autour du contenu */
+    padding: 75px;
+    /* couleur du fond */
+    background: white;
+}
+
+#oui{
+    /* largeur */
+    width: 100%;
+    /* zone de remplissage autour du contenu */
+    padding: 12px;
+    /* marge en dessous du bouton */
+    margin-bottom: 5px;
+    /* arrondi de la bordure */
+    border-radius: 15px;
+    /* texte en gras */
+    font-weight: bold;
+    /* couleur du texte */
+    color: black;
+    /* pas de bordure */
+    border: none;
+    /* taille du texte */
+    font-size: 15px;
+    /* couleur dégradé du fond */
+    background: green;
+    /* début transition */
+    transition: 0.5s;
+}
+#oui:hover{
+    /* augmentation de la taille du bouton */
+    transform: scale(1.05);
+}
+
+
+
+#non {
+    /* largeur */
+    width: 100%;
+    /* zone de remplissage autour du contenu */
+    padding: 12px;
+    /* marge en dessous du bouton */
+    margin-bottom: 5px;
+    /* arrondi de la bordure */
+    border-radius: 15px;
+    /* texte en gras */
+    font-weight: bold;
+    /* couleur du texte */
+    color: black;
+    /* pas de bordure */
+    border: none;
+    /* taille du texte */
+    font-size: 15px;
+    /* couleur dégradé du fond */
+    background: #e91d0b;
+    /* début transition */
+    transition: 0.5s;
+}
+
+#non:hover {
+    /* augmentation de la taille du bouton */
+    transform: scale(1.05);
+}

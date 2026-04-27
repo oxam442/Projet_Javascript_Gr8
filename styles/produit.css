@@ -20,7 +20,7 @@
     display: flex;
     /* alignement du texte horizontalement */
     align-items: center;
-}
+} 
 
 #nomSection {
     /* texte en gras */

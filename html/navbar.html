@@ -16,7 +16,7 @@
 
     
 </head>
-<body oncopy="alert('Attention au plagiat.')">
+<body oncopy="plagiat()">
     <header>
         <div id="menu">
             <!-- logo -->
@@ -30,21 +30,22 @@
             <!-- lien vers la page : Produits/services -->
             <a href="produit.html" onclick="changePage(event,this), background(this)">PRODUITS/SERVICES</a>
             <!-- lien vers la page : Equipe -->
-            <a href="equipe.html" onclick="changePage(event,this), background(this)">EQUIPE</a>
+            <a href="equipe.html" onclick="changeConfirm(event), background(this)">EQUIPE</a>
             <!-- lien vers la page : Contact -->
             <a href="contact.html" onclick="changePage(event,this), background(this)">CONTACT</a>
             <!-- lien vers la page : Nous trouver -->
             <a href="api.html" onclick="changePage(event,this), background(this)">NOUS TROUVER</a>
 
             <!-- horloge -->
+            <a href="https://www.youtube.com/watch?v=E4WlUXrJgy4&msockid=721eed81423c11f1b0c55f70f7c9072b" target="_blank" style="background: #0e1f5a;">
             <div id="clock" class="clock">
                 <div id="hours-tens"></div>
                 <div id="hours-units"></div>
                 <div id="colon" class="colon">:</div>
                 <div id="minutes-tens"></div>
                 <div id="minutes-units"></div>
-                <div></div>
             </div>
+            </a>
         </div>
     </header>
 
@@ -56,6 +57,15 @@
         </div>
     </div>
 
+    <div id="confirm">
+        <div class="confirmClass">
+            <p>Voulez-vous aller vers cette page ?</p>
+            <a href="equipe.html">
+                <button id="oui" onclick="changePageEquipe(event,this)">OUI</button>
+            </a>
+            <button id="non" onclick="confirmCancel()">NON</button>
+        </div>
+    </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <!-- <footer>
         <table id="footer">
