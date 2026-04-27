@@ -11,7 +11,7 @@ conseils : pdf aléatoire\
 
 TO DO LISTS : 
 
-Rick roll lors du clic sur l'horloge\
+**Rick roll lors du clic sur l'horloge**\
 alert à chaque fin de la slide du slogan\
 jeu (cps : 10 pendant 5 sec )? \
 interdit de coller sur le formulaire
