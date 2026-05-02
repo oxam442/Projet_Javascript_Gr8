@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- fichier css -->
-    <link rel="stylesheet" href="../digitalClock.css">
+    <link rel="stylesheet" href="../styles/digitalClock.css">
     <link rel="stylesheet" href="../styles/produit.css">
     <link rel="stylesheet" href="../styles/menu.css">
     <!-- fichier js -->
     <script src="../scripts/produit.js" defer></script>
-    <script src="../digitalClock.js" defer></script>
+    <script src="../scripts/digitalClock.js" defer></script>
     <script src="../scripts/menu.js" defer></script>
+    <script src="../scripts/smiley.js" defer></script>
     <!-- titre -->
     <title>Produits/services</title>
 </head>
@@ -38,7 +39,7 @@
             <a href="contact.html" onclick="changePage(event,this), background(this)">CONTACT</a>
             <!-- lien vers la page : Nous trouver -->
             <a href="api.html" onclick="changePage(event,this), background(this)">NOUS TROUVER</a>
-
+            <a id="timer">timer : 00:00</a>
             <!-- horloge -->
                 <div id="clock" class="clock">
                     <div id="hours-tens"></div>
@@ -51,10 +52,36 @@
     </header>
 
     <!-- Popup de chargement d'une page -->
-    <div id="popup">
-        <div class="popupClass">
+    <div id="popupLoader">
+        <div class="popupLoaderClass">
             <p>Chargement en cours...</p>
             <div class="loader"></div>
+        </div>
+    </div>
+
+    <!-- popup confirmation pour aller sur la page équipe -->
+    <div id="popupConfirm">
+        <div class="popupConfirmClass">
+            <p>Voulez-vous aller vers cette page ?</p>
+            <a href="equipe.html">
+                <button id="oui" onclick="changePageEquipe(event,this)">OUI</button>
+            </a>
+            <button id="non" onclick="confirmCancel()">NON</button>
+        </div>
+    </div>
+
+    <!-- popup confirmation de l'achat -->
+    <div id="popupAchat">
+        <div class="popupAchatClass">
+            <p>Voulez-vous comfirmer votre achat ?</p>
+             <button onclick="changeSmiley()">🛒 ACHETER</button>
+        </div>
+    </div>
+
+    <!-- popup smiley -->
+    <div id="popupSmiley">
+        <div class="popupSmileyClass">
+            <canvas id="demo" width="200" height="225"></canvas>
         </div>
     </div>
 
@@ -77,7 +104,7 @@
             <!-- prix -->
             <div id="prix">5€ unité</div>
             <!-- bouton acheté -->
-            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+            <button id="button" onclick="changeAchat()" >🛒 ACHETER</button>
         </div>
 
     </div>
@@ -101,7 +128,7 @@
             <!-- prix -->
             <div id="prix">5€ unité</div>
             <!-- bouton acheté -->
-            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+            <button id="button" onclick="changeAchat()" >🛒 ACHETER</button>
         </div>
 
         <!-- stylo -->
@@ -113,7 +140,7 @@
             <!-- prix -->
             <div id="prix">2€ unité</div>
             <!-- bouton acheté -->
-            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+            <button id="button" onclick="changeAchat()" >🛒 ACHETER</button>
         </div>
 
         <!-- porte-clé -->
@@ -125,7 +152,7 @@
             <!-- prix -->
             <div id="prix">3€ unité</div>
             <!-- bouton acheté -->
-            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+            <button id="button" onclick="changeAchat()" >🛒 ACHETER</button>
         </div>
         
         <!-- Gourde -->
@@ -137,7 +164,7 @@
             <!-- prix -->
             <div id="prix">15€ unité</div>
             <!-- bouton acheté -->
-            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+            <button id="button" onclick="changeAchat()" >🛒 ACHETER</button>
         </div>
                 
         <!-- Mug -->
@@ -149,7 +176,7 @@
             <!-- prix -->
             <div id="prix">8€ unité</div>
             <!-- bouton acheté -->
-            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+            <button id="button" onclick="changeAchat()" >🛒 ACHETER</button>
         </div>
                 
         <!-- tapis de course -->
@@ -161,7 +188,7 @@
             <!-- prix -->
             <div id="prix">1000€ unité</div>
             <!-- bouton acheté -->
-            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+            <button id="button" onclick="changeAchat()" >🛒 ACHETER</button>
         </div>
                 
         <!-- trousse -->
@@ -173,7 +200,7 @@
             <!-- prix -->
             <div id="prix">20€ unité</div>
             <!-- bouton acheté -->
-            <button id="button" onclick="achat()" >🛒 ACHETER</button>
+            <button id="button" onclick="changeAchat()" >🛒 ACHETER</button>
         </div>
                 
     </div>

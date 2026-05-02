@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- fichier css -->
-    <link rel="stylesheet" href="../digitalClock.css">
+    <link rel="stylesheet" href="../styles/digitalClock.css">
     <link rel="stylesheet" href="../styles/menu.css">
     <!-- fichier js -->
-    <script src="../digitalClock.js" defer></script>
+    <script src="../scripts/digitalClock.js" defer></script>
     <script src="../scripts/menu.js" defer></script>
     <!-- titre -->
     <title>Document</title> 
@@ -35,9 +35,10 @@
             <a href="contact.html" onclick="changePage(event,this), background(this)">CONTACT</a>
             <!-- lien vers la page : Nous trouver -->
             <a href="api.html" onclick="changePage(event,this), background(this)">NOUS TROUVER</a>
-
+            <!-- timer de durée sur la page -->
+            <a id="timer" style="background: none;padding:0px; margin: 0px;">timer : 00:00</a>
             <!-- horloge -->
-            <a href="https://www.youtube.com/watch?v=E4WlUXrJgy4&msockid=721eed81423c11f1b0c55f70f7c9072b" target="_blank" style="background: #0e1f5a;">
+            <a href="https://www.youtube.com/watch?v=E4WlUXrJgy4&msockid=721eed81423c11f1b0c55f70f7c9072b" target="_blank" style="background: none;padding:0px; margin: 0px;">
             <div id="clock" class="clock">
                 <div id="hours-tens"></div>
                 <div id="hours-units"></div>
@@ -50,15 +51,16 @@
     </header>
 
     <!-- Popup de chargement d'une page -->
-    <div id="popup">
-        <div class="popupClass">
+    <div id="popupLoader">
+        <div class="popupLoaderClass">
             <p>Chargement en cours...</p>
             <div class="loader"></div>
         </div>
     </div>
 
-    <div id="confirm">
-        <div class="confirmClass">
+    <!-- popup confirmation pour aller sur la page équipe -->
+    <div id="popupConfirm">
+        <div class="popupConfirmClass">
             <p>Voulez-vous aller vers cette page ?</p>
             <a href="equipe.html">
                 <button id="oui" onclick="changePageEquipe(event,this)">OUI</button>

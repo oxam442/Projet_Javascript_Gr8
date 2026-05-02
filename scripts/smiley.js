@@ -1,9 +1,3 @@
-function ColorButton() {
-    let color = `blue`;
-    let button=document.getElementById("button");
-    button.style.backgroundColor=  color;
-} 
-
 
 // fonction pour afficher le dessin
 function canvasApp(){
@@ -42,7 +36,7 @@ function canvasApp(){
     // oeil droit (cercle noir)
     context.beginPath(); 
 
-    // Définition du style
+    // Définition du style 
     context.fillStyle="black";
 
     // Dessin du cercle
@@ -69,5 +63,5 @@ function canvasApp(){
 
     // ajout du text en dessous
     context.fillText("Vous avez acheté ce produit",35,200);
-    canvas.style.backgroundColor=style="blue";
 }
+canvasApp();

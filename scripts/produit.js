@@ -11,16 +11,17 @@ function changeImg(image){
 }
 
 
-function achat(){
-    let largeur = 600;
-    let hauteur = 400;
-    let left = (window.screen.width - largeur) / 2;
-    let top = (window.screen.height - hauteur) / 2;
-    window.open(
-        "acheter.html",
-        "popup",
-        `width=${largeur},height=${hauteur},left=${left},top=${top}`
-    );
+function changeAchat(){
+    // affiche le popup de confirmation 
+    document.getElementById("popupAchat").style.display="flex";
 }
-
  
+function changeSmiley(){
+    // cache le popup d'achat
+    document.getElementById("popupAchat").style.display="none";
+    // affiche le popup du smiley 
+    document.getElementById("popupSmiley").style.display="flex";
+    setTimeout(()=>{
+        document.getElementById("popupSmiley").style.display="none";
+    },3000);
+}

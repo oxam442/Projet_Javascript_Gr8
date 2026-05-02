@@ -72,7 +72,4 @@ function main(){
     // Every minutes updates the time
     setInterval(()=>setTime(),1000)
 }
-
-
-
 main();

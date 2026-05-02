@@ -131,5 +131,73 @@ button:hover {
 }
 
 
+/* achat */
+#popupAchat {
+    /* ne fait pas apparaitre le popup */
+    display: none;
+    /* alignement du texte verticalement */
+    justify-content: center;
+    /* alignement du texte horizontalement */
+    align-items: center;
+    /* largeur */
+    width: 100%;
+    /* hauteur */
+    height: 100%;
+    /* position du popup en (0,0) */
+    top: 0;
+    left: 0;
+    /* le popup est fixe */
+    position: fixed;
+    
+}
+.popupAchatClass {
+    /* texte centré */
+    text-align: center;
+    /* taille texte */
+    font-size: 20px;
+    /* texte en gras */
+    font-weight: bold;
+    /* arrondi de la bordure */
+    border-radius: 10px;
+    /* zone de remplissage autour du contenu */
+    padding: 75px;
+    /* couleur du fond */
+    background: white;
+}
+
+
+/* smiley */
+#popupSmiley {
+    /* ne fait pas apparaitre le popup */
+    display: none;
+    /* alignement du texte verticalement */
+    justify-content: center;
+    /* alignement du texte horizontalement */
+    align-items: center;
+    /* largeur */
+    width: 100%;
+    /* hauteur */
+    height: 100%;
+    /* position du popup en (0,0) */
+    top: 0;
+    left: 0;
+    /* le popup est fixe */
+    position: fixed;
+    
+}
+.popupSmileyClass {
+    /* texte centré */
+    text-align: center;
+    /* taille texte */
+    font-size: 20px;
+    /* texte en gras */
+    font-weight: bold;
+    /* arrondi de la bordure */
+    border-radius: 10px;
+    /* zone de remplissage autour du contenu */
+    padding: 75px;
+    /* couleur du fond */
+    background: white;
+}
 
 

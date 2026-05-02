@@ -2,8 +2,36 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transform-origin: center;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
 }
-/* vw */
+@media (max-width:1500px) {
+    #clock {
+        transform: scale(0.8);
+    }  
+}
+@media (max-width:1250px) {
+    #clock {
+        transform: scale(0.70);
+    }  
+}
+@media (max-width:1000px) {
+    #clock {
+        transform: scale(0.6);
+    }  
+}
+@media (max-width:750px) {
+    #clock {
+        transform: scale(0.50);
+    }  
+}
+@media (max-width:500px) {
+    #clock {
+        transform: scale(0.4);
+    }  
+}
+
 .segment0 { left: 4px; top: 1px; width: 12px; height: 0px; }
 .segment1 { left: 1px; top: 4px; width: 0px; height: 12px; }
 .segment2 { left: 19px; top: 4px; width: 0px; height: 12px; }

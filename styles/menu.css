@@ -15,7 +15,7 @@ body {
 /* menu */
 #menu {
     /* largeur */
-    width: 80%;
+    width:85%;
     /* hauteur */
     height: 80px;
     /* couleur du fond */
@@ -36,6 +36,39 @@ body {
     justify-content: center;
     /* espace entre chaque élément */
     gap: 3%;
+    transition: transform 0.3s ease;
+    transform: scale(1);
+}
+
+@media (max-width:1500px) {
+    #menu {
+        transform: scale(0.95);
+    }  
+}
+@media (max-width:1250px) {
+    #menu {
+        transform: scale(0.90);
+    }  
+}
+@media (max-width:1000px) {
+    #menu {
+        transform: scale(0.85);
+    }  
+}
+@media (max-width:750px) {
+    #menu {
+        transform: scale(0.80);
+    }  
+}
+@media (max-width:500px) {
+    #menu {
+        transform: scale(0.75);
+    }  
+}
+@media (max-width:250px) {
+    #menu {
+        transform: scale(0.7);
+    }  
 }
 
 #menu a{
@@ -45,7 +78,7 @@ body {
     text-decoration: none;
 }
 
-#menu a:hover {
+#menu a:hover:not(#timer) {
     /* couleur degrade du fond */
     background: linear-gradient(
         to right,
@@ -60,14 +93,67 @@ body {
 
 #logo {
     /* largeur en fonction de la taille de l'ecran */
-    width: clamp(5px,5vw,60px);
+    width: clamp(10px, 5vw,60px);
     /* hauteur en fonction de la taille de l'ecran */
-    height: clamp(5px,5vw,60px);
+    height: clamp(10px, 5vw,60px);
 }
 
 
 /* popup chargement */
-#popup {
+#popupLoader {
+    /* ne fait pas apparaitre le popup */
+    display: none;
+    /* alignement du texte verticalement */
+    justify-content: center;
+    /* alignement du texte horizontalement */
+    align-items: center;
+    /* largeur */
+    width: 100%;
+    /* hauteur */
+    height: 100%;
+    /* position du popup en (0,0) */
+    top: 0;
+    left: 0;
+    /* le popup est fixe */
+    position: fixed;
+    
+}
+.popupLoaderClass {
+    /* texte centré */
+    text-align: center;
+    /* taille texte */
+    font-size: 20px;
+    /* texte en gras */
+    font-weight: bold;
+    /* arrondi de la bordure */
+    border-radius: 10px;
+    /* zone de remplissage autour du contenu */
+    padding: 75px;
+    /* couleur du fond */
+    background: white;
+}
+/* Loader rond */
+.loader{
+    width: 55px;
+    height: 55px;
+    border: 6px solid white;
+    border-radius: 50%;
+    border-bottom-color: #e9760b;
+    display: inline-block;
+    animation: rotation 1s linear infinite;
+}
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* popup confirmation pour aller sur la page équipe  */
+#popupConfirm {
     /* ne fait pas apparaitre le popup */
     display: none;
     /* alignement du texte verticalement */
@@ -86,7 +172,7 @@ body {
     
 }
 
-.popupClass {
+.popupConfirmClass {
     /* texte centré */
     text-align: center;
     /* taille texte */
@@ -101,23 +187,59 @@ body {
     background: white;
 }
 
-/* Loader rond (trouvé sur internet) --> à refaire */
-.loader {
-    width: 48px;
-    height: 48px;
-    border: 5px solid #FFF;
-    border-bottom-color: #FF3D00;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
-    }
-    @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-} 
+#oui{
+    /* largeur */
+    width: 100%;
+    /* zone de remplissage autour du contenu */
+    padding: 12px;
+    /* marge en dessous du bouton */
+    margin-bottom: 5px;
+    /* arrondi de la bordure */
+    border-radius: 15px;
+    /* texte en gras */
+    font-weight: bold;
+    /* couleur du texte */
+    color: black;
+    /* pas de bordure */
+    border: none;
+    /* taille du texte */
+    font-size: 15px;
+    /* couleur dégradé du fond */
+    background: green;
+    /* début transition */
+    transition: 0.5s;
+}
+#oui:hover{
+    /* augmentation de la taille du bouton */
+    transform: scale(1.05);
+}
+
+#non {
+    /* largeur */
+    width: 100%;
+    /* zone de remplissage autour du contenu */
+    padding: 12px;
+    /* marge en dessous du bouton */
+    margin-bottom: 5px;
+    /* arrondi de la bordure */
+    border-radius: 15px;
+    /* texte en gras */
+    font-weight: bold;
+    /* couleur du texte */
+    color: black;
+    /* pas de bordure */
+    border: none;
+    /* taille du texte */
+    font-size: 15px;
+    /* couleur dégradé du fond */
+    background: #e91d0b;
+    /* début transition */
+    transition: 0.5s;
+}
+
+#non:hover {
+    /* augmentation de la taille du bouton */
+    transform: scale(1.05);
+}
+
 

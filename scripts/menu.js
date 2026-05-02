@@ -14,7 +14,7 @@ function changePage(event,page){
     // bloque la page pour l'instant
     event.preventDefault();
     // affiche le loader
-    document.getElementById("popup").style.display="flex";
+    document.getElementById("popupLoader").style.display="flex";
     // attend 2 seconde pour passer à la prochaine page
     setTimeout(()=>{
         window.location.href=url;
@@ -25,11 +25,11 @@ function changePageEquipe(event,page){
     // bloque la page pour l'instant
     event.preventDefault();
     // cache la page de confirmation
-    document.getElementById("confirm").style.display="none";
+    document.getElementById("popupConfirm").style.display="none";
     // récupère le lien de la prochaine page
     let url = page.parentElement.href;
     // affiche le loader
-    document.getElementById("popup").style.display="flex";
+    document.getElementById("popupLoader").style.display="flex";
     // attend 2 seconde pour passer à la prochaine page
     setTimeout(()=>{
         window.location.href=url;
@@ -38,14 +38,39 @@ function changePageEquipe(event,page){
 
 function changeConfirm(event){
     event.preventDefault();
-    document.getElementById("confirm").style.display="flex";
+    // affiche la page de confirmation 
+    document.getElementById("popupConfirm").style.display="flex";
 }
 
 function confirmCancel(){
-    document.getElementById("confirm").style.display="none";
+    // enleve l'affichage de la page de comfirmation
+    document.getElementById("popupConfirm").style.display="none";
     document.getElementById("menu").children[4].style.background="#0e1f5a";
 }
 
 function plagiat(){
     console.log("Attention au plagiat.");
 }
+
+function timer(){
+    // récupère l'id du timer
+    let timer = document.getElementById("timer");
+    //  définition variable minute et seconde
+    let minute = 0;
+    let seconde = 0;
+
+    setInterval(()=>{
+    if (seconde==59){
+        // passage des secondes en minutes
+        minute++;
+        seconde=0;
+    }
+    else{
+        //  ajoute une seconde
+        seconde++;
+    }
+    // affichage du timer
+    timer.innerText=`timer : ${String(minute).padStart(2,"0")}:${String(seconde).padStart(2,"0")}`}
+    ,1000);
+}
+timer();
