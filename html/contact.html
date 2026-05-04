@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- fichier css -->
-    <link rel="stylesheet" href="../styles/produit.css">
+    <link rel="stylesheet" href="../styles/contact.css">
     <link rel="stylesheet" href="../styles/menu.css">
     <!-- fichier js -->
-    <script src="../scripts/produit.js" defer></script>
+    <script src="../scripts/contact.js" defer></script>
     <script src="../scripts/menu.js" defer></script>
     <!-- titre -->
-    <title>navbar</title>
+    <title>Contact - CowalkZilla</title>
 </head>
 
 
@@ -69,7 +69,28 @@
         </div> 
     </div>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <form name="formContact">
+        <div>
+            <input type="text" id="nomContact" placeholder="Prénom Nom" oninput="azerty(), verif()">
+            <div id="nomRule">
+                *le nom n'est pas conforme !
+            </div>
+        </div> 
+        <div>
+            <input type="text" id="mailContact" placeholder="email@exemple.com" oninput="qwerty(), verif()"> 
+            <div id="mailRule">
+                l'email n'est pas conforme !
+            </div>
+        </div>
+        <div>
+            <input type="text" id="messageContact" placeholder="Votre message (1000 caractères maximum)" oninput="zqsd(), verif()">
+            <div id="messageRule">
+                message n'est pas conforme !
+            </div>
+        </div>
+        <button id="submitButton">submit</button>
+    </form>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer>
         <table id="footer">
             <tr>
