@@ -1,14 +1,18 @@
 /* page */
+:root {
+    --primary-color: #ff6b35;
+    --secondary-color: #004e89;
+    --accent-color: #ffa62b;
+    --dark-color: #1a1a2e;
+    --light-color: #f8f9fa;
+    --text-color: #333;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+@import url('https://fonts.cdnfonts.com/css/digital');
 body {
-    /* background: linear-gradient( */
-        /* to bottom,
-        #6b6f8e 0%,
-        #8f84b5 10%,
-        #b497c9 30%,
-        #d6a9b5 60%,
-        #e7c3a1 90%
-    ); */
-    background: #ebe3f2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--light-color);
 }
 
 
@@ -16,7 +20,7 @@ body {
 #menu {
     width:75%;
     height: 80px;
-    background-color: #0e1f5a;
+    background-color: var(--dark-color);
     border-radius: 45px;
     margin: 20px auto;
     margin-top: 25px;
@@ -25,6 +29,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 3%;
+    
 }
 
 #menu a{
@@ -33,13 +38,14 @@ body {
 }
 
 #menu a:hover:not(#horloge) {
-    background: #e96b0b;
+    background: var(--primary-color);
     padding: 10px;
     border-radius: 6px;
 }
 
 #horloge{
-    background: #d1dbff51;
+    font-family: 'Digital', sans-serif;
+    background: var(--secondary-color);
     padding: 10px; 
     margin: 0px;
     border-radius: 25px;
@@ -78,6 +84,7 @@ body {
     position: fixed;
     
 }
+/* modifier ici, c'est déjà une class */
 .popupClass {
     text-align: center;
     font-size: 20px;
@@ -113,7 +120,7 @@ body {
     margin-bottom: 5px;
     border-radius: 15px;
     font-weight: bold;
-    color: black;
+    color: var(--text-color);
     border: none;
     font-size: 15px;
     background: green;
@@ -130,10 +137,10 @@ body {
     margin-bottom: 5px;
     border-radius: 15px;
     font-weight: bold;
-    color: black;
+    color: var(--text-color);
     border: none;
     font-size: 15px;
-    background: #e91d0b;
+    background: red;
     transition: 0.5s;
 }
 
@@ -150,11 +157,11 @@ body {
 }
 
 #footer {
-    background-color:#0e1f5a;
+    background-color:var(--dark-color);
     border-bottom: 1px solid white;
     width: 100%;
     font-size: 1.2vw;
-    color: white;
+    color: var(--light-color);
     padding: 18px;
 }
 
@@ -167,11 +174,13 @@ body {
     width: 100%;
     padding-top: 18px;
     padding-bottom: 18px;
-    background-color:#0e1f5a;
+    background-color:var(--dark-color);
     font-size: 1.2vw;
     color: white;
 }
-
+#tel {
+    color: var(--accent-color);
+}
 /* popup  */
 #popupTelephone {
     display: none;
@@ -183,4 +192,10 @@ body {
     left: 0;
     position: fixed;
     
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
