@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits & Services - CowalkZilla</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="services.css">
+    <script src="main.js" defer></script>
+    <script src="services.js" defer></script>
+</head>
+<body>
+    <!-- Menu de navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="CowalkZilla Logo" id="logo">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link" data-page="accueil">Accueil</a></li>
+                <li><a href="about.html" class="nav-link" data-page="about">À Propos</a></li>
+                <li><a href="services.html" class="nav-link active" data-page="services">Produits/Services</a></li>
+                <li><a href="team.html" class="nav-link" data-page="team">L'Équipe</a></li>
+                <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+                <li><a href="location.html" class="nav-link" data-page="location">Nous Trouver</a></li>
+            </ul>
+            <div class="nav-info">
+                <div class="clock" id="clock"></div>
+                <div class="timer" id="timer">00:00</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Loading overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Contenu principal -->
+    <main>
+        <section class="services-header">
+            <div class="container">
+                <h1>Nos Produits & Services</h1>
+                <p class="subtitle">Des solutions innovantes pour transformer votre collaboration</p>
+            </div>
+        </section>
+
+        <!-- Filtres -->
+        <section class="filters-section">
+            <div class="container">
+                <h2>Filtrer les produits</h2>
+                <form id="filterForm" class="filter-form">
+                    <div class="filter-group">
+                        <label for="filterName">Nom du produit</label>
+                        <input type="text" id="filterName" placeholder="Rechercher un produit...">
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="filterCategory">Catégorie</label>
+                        <select id="filterCategory">
+                            <option value="">Toutes les catégories</option>
+                            <option value="logiciels">Logiciels</option>
+                            <option value="services">Services</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="filterTheme">Thème</label>
+                        <select id="filterTheme">
+                            <option value="">Tous les thèmes</option>
+                            <option value="collaboration">Collaboration</option>
+                            <option value="communication">Communication</option>
+                            <option value="gestion">Gestion de projet</option>
+                            <option value="formation">Formation</option>
+                            <option value="consulting">Consulting</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Prix (€/mois)</label>
+                        <div class="price-inputs">
+                            <input type="number" id="filterPriceMin" placeholder="Min" min="0">
+                            <span>-</span>
+                            <input type="number" id="filterPriceMax" placeholder="Max" min="0">
+                        </div>
+                    </div>
+                    
+                    <div class="filter-actions">
+                        <button type="button" id="applyFilters" class="btn btn-primary">Appliquer les filtres</button>
+                        <button type="reset" id="resetFilters" class="btn btn-secondary">Réinitialiser</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Catégorie 1 : Logiciels -->
+        <section class="products-section">
+            <div class="container">
+                <h2 class="category-title">
+                    <span class="category-icon">💻</span>
+                    Logiciels
+                </h2>
+                <div class="products-grid" id="softwareProducts">
+                    <!-- Les produits seront générés dynamiquement -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Catégorie 2 : Services -->
+        <section class="products-section">
+            <div class="container">
+                <h2 class="category-title">
+                    <span class="category-icon">🎯</span>
+                    Services
+                </h2>
+                <div class="products-grid" id="serviceProducts">
+                    <!-- Les services seront générés dynamiquement -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Bouton scroll to top -->
+        <button class="scroll-to-top" id="scrollToTop">
+            ↑
+        </button>
+    </main>
+
+    <!-- Canvas pour confirmation d'achat -->
+    <canvas id="purchaseCanvas" style="display: none;"></canvas>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CowalkZilla</h3>
+                    <p>Talk Walk Rwar</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>ISEN Yncréa Ouest - Nantes</p>
+                    <p>33 Avenue du Champ de Manœuvres</p>
+                    <p>44470 Carquefou</p>
+                    <p class="phone-number">Tél : <span class="copyable-phone">+33 2 40 52 40 52</span></p>
+                </div>
+                <div class="footer-section">
+                    <p>&copy; 2026 CowalkZilla. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

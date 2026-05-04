@@ -1,29 +1,21 @@
 /* titre de section */
 .titreSection {
-    /* couleur texte */
     color: white; 
-    /* couleur dégradé du fond */
     background: linear-gradient(
         to right,
-        #e9760b,
-        #e91d0b  
+        #e96b0b,
+        #e9510b  
     );
-    /* police */
     font-family: Arial;
-    /* arrondi de la bordure */
     border-radius: 6px;
-    /* zone de remplissage autour du contenu */
     padding: 10px 16px;
-    /* alignment sur les cotés de la page */
     justify-content: space-between;
-    /* définition du type de la boite */
     display: flex;
-    /* alignement du texte horizontalement */
     align-items: center;
 } 
 
 #nomSection {
-    /* texte en gras */
+    /* texte en gras */ 
     font-weight: bold;
     /* taille du texte */
     font-size: 20px;
@@ -37,167 +29,88 @@
 
 /* Itemframe */
 .container {
-    /* définition du type de la boite */
     display: flex;
-    /* alignement du texte verticalement */
     justify-content: center; 
-    /* marge */
     margin: 20px;
-    /* espace entre chaque élément */
     gap: 20px;
-    /* zone de remplissage autour du contenu */
     padding: 20px;
     /* retour à la ligne s'il n'y a plus de place sur la ligne */
     flex-wrap: wrap;
 }
 
 .box {
-    /* largeur */
     width: 125px; 
-    /* hauteur */
     height: 250px; 
-    /* zone de remplissage autour du contenu */
     padding: 10px;
-    /* taille du texte */
-    font-size: 15px;
-    /* couleur du fond */
-    background-color: #0e1f5a;
-    /* taille et couleur de la bordure */
-    border: 2px solid #e9760b;
-    /* arrondi de la bordure */
+    font-size: 15px; 
+    background-color: #f4f5fb;
+    /* background-color: #ebe3f2; */
+    border: 1px solid rgba(0,0,0,0.05);
     border-radius: 15px;
-    /* couleur du texte */
-    color: white;
-    /* délai pour la transition */
+    color: #1e293b;
     transition: all 0.2s; 
     /* police */
     font-family: Arial;    
 }
 
 .box img {
-    /* largeur */
     width: 125px; 
-    /* hauteur */
     height: 125px; 
-    /* texte centré */
     text-align: center;
-    /* marge en dessous de l'image */
     margin-bottom: 10px;
-    /* arrondi de la bordure */
     border-radius: 5px;
-    /* couleur du fond s'il n'y a pas de photo */
     background-color: #6b6f8e;
 }
 
 #prix {
-    /* texte en gras */
     font-weight: bold;
-    /* couleur du texte */
-    color: #e9760b;
-    /* marge en dessous du texte */
+    color: #e96b0b;
     margin-bottom: 10px;
 }
 
 button {
-    /* largeur */
     width: 100%;
-    /* zone de remplissage autour du contenu */
     padding: 12px;
-    /* marge en dessous du bouton */
     margin-bottom: 5px;
-    /* arrondi de la bordure */
     border-radius: 15px;
-    /* texte en gras */
     font-weight: bold;
-    /* couleur du texte */
     color: white;
-    /* pas de bordure */
     border: none;
-    /* taille du texte */
     font-size: 15px;
-    /* couleur dégradé du fond */
-    background: linear-gradient(
-        to right,
-        #e9760b,
-        #e91d0b
-    );
-    /* début transition */
+    background: #e96b0b;
     transition: 0.5s;
 }
 
 button:hover {
-    /* augmentation de la taille du bouton */
     transform: scale(1.05);
 }
 
 
 /* achat */
 #popupAchat {
-    /* ne fait pas apparaitre le popup */
     display: none;
-    /* alignement du texte verticalement */
     justify-content: center;
-    /* alignement du texte horizontalement */
     align-items: center;
-    /* largeur */
     width: 100%;
-    /* hauteur */
     height: 100%;
-    /* position du popup en (0,0) */
     top: 0;
     left: 0;
-    /* le popup est fixe */
     position: fixed;
     
 }
-.popupAchatClass {
-    /* texte centré */
-    text-align: center;
-    /* taille texte */
-    font-size: 20px;
-    /* texte en gras */
-    font-weight: bold;
-    /* arrondi de la bordure */
-    border-radius: 10px;
-    /* zone de remplissage autour du contenu */
-    padding: 75px;
-    /* couleur du fond */
-    background: white;
-}
-
 
 /* smiley */
 #popupSmiley {
-    /* ne fait pas apparaitre le popup */
+
     display: none;
-    /* alignement du texte verticalement */
     justify-content: center;
-    /* alignement du texte horizontalement */
     align-items: center;
-    /* largeur */
     width: 100%;
-    /* hauteur */
     height: 100%;
-    /* position du popup en (0,0) */
     top: 0;
     left: 0;
-    /* le popup est fixe */
     position: fixed;
     
-}
-.popupSmileyClass {
-    /* texte centré */
-    text-align: center;
-    /* taille texte */
-    font-size: 20px;
-    /* texte en gras */
-    font-weight: bold;
-    /* arrondi de la bordure */
-    border-radius: 10px;
-    /* zone de remplissage autour du contenu */
-    padding: 75px;
-    /* couleur du fond */
-    background: white;
 }
 
 

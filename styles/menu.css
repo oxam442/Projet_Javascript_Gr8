@@ -1,94 +1,49 @@
 /* page */
 body {
-    /* couleur degrade du fond */
-    background: linear-gradient(
-        to bottom,
+    /* background: linear-gradient( */
+        /* to bottom,
         #6b6f8e 0%,
         #8f84b5 10%,
         #b497c9 30%,
         #d6a9b5 60%,
         #e7c3a1 90%
-    );
+    ); */
+    background: #ebe3f2;
 }
 
 
 /* menu */
 #menu {
-    /* largeur */
-    width:85%;
-    /* hauteur */
+    width:75%;
     height: 80px;
-    /* couleur du fond */
     background-color: #0e1f5a;
-    /* orrondi de la bordure */
     border-radius: 45px;
-    /* marge */
     margin: 20px auto;
-    /* marge en haut */
     margin-top: 25px;
-    /* taille du texte en fonction de la taille de l'ecran */
     font-size: 1.1vw;
-    /* définition du type de la boite */
     display: flex;
-    /* alignement du texte horizontalement */
     align-items: center;
-    /* alignement du texte verticalement */
     justify-content: center;
-    /* espace entre chaque élément */
     gap: 3%;
-    transition: transform 0.3s ease;
-    transform: scale(1);
-}
-
-@media (max-width:1500px) {
-    #menu {
-        transform: scale(0.95);
-    }  
-}
-@media (max-width:1250px) {
-    #menu {
-        transform: scale(0.90);
-    }  
-}
-@media (max-width:1000px) {
-    #menu {
-        transform: scale(0.85);
-    }  
-}
-@media (max-width:750px) {
-    #menu {
-        transform: scale(0.80);
-    }  
-}
-@media (max-width:500px) {
-    #menu {
-        transform: scale(0.75);
-    }  
-}
-@media (max-width:250px) {
-    #menu {
-        transform: scale(0.7);
-    }  
 }
 
 #menu a{
-    /* couleur texte */
     color: white;
-    /* le texte n'est plus souligné */
     text-decoration: none;
 }
 
-#menu a:hover:not(#timer) {
-    /* couleur degrade du fond */
-    background: linear-gradient(
-        to right,
-        #e9760b,
-        #e91d0b  
-    );
-    /* zone de remplissage autour du contenu */
-    padding: 15px;
-    /* arrondi de la bordure */
+#menu a:hover:not(#horloge) {
+    background: #e96b0b;
+    padding: 10px;
     border-radius: 6px;
+}
+
+#horloge{
+    background: #d1dbff51;
+    padding: 10px; 
+    margin: 0px;
+    border-radius: 25px;
+
 }
 
 #logo {
@@ -99,46 +54,46 @@ body {
 }
 
 
-/* popup chargement */
-#popupLoader {
-    /* ne fait pas apparaitre le popup */
+/* popup  */
+#popupConfirm {
     display: none;
-    /* alignement du texte verticalement */
     justify-content: center;
-    /* alignement du texte horizontalement */
     align-items: center;
-    /* largeur */
     width: 100%;
-    /* hauteur */
     height: 100%;
-    /* position du popup en (0,0) */
     top: 0;
     left: 0;
-    /* le popup est fixe */
     position: fixed;
     
 }
-.popupLoaderClass {
-    /* texte centré */
+
+#popupLoader {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    
+}
+.popupClass {
     text-align: center;
-    /* taille texte */
     font-size: 20px;
-    /* texte en gras */
     font-weight: bold;
-    /* arrondi de la bordure */
     border-radius: 10px;
-    /* zone de remplissage autour du contenu */
     padding: 75px;
-    /* couleur du fond */
     background: white;
 }
+
 /* Loader rond */
 .loader{
     width: 55px;
     height: 55px;
     border: 6px solid white;
     border-radius: 50%;
-    border-bottom-color: #e9760b;
+    border-bottom-color: #e96b0b;
     display: inline-block;
     animation: rotation 1s linear infinite;
 }
@@ -151,62 +106,17 @@ body {
     }
 }
 
-
-/* popup confirmation pour aller sur la page équipe  */
-#popupConfirm {
-    /* ne fait pas apparaitre le popup */
-    display: none;
-    /* alignement du texte verticalement */
-    justify-content: center;
-    /* alignement du texte horizontalement */
-    align-items: center;
-    /* largeur */
-    width: 100%;
-    /* hauteur */
-    height: 100%;
-    /* position du popup en (0,0) */
-    top: 0;
-    left: 0;
-    /* le popup est fixe */
-    position: fixed;
-    
-}
-
-.popupConfirmClass {
-    /* texte centré */
-    text-align: center;
-    /* taille texte */
-    font-size: 20px;
-    /* texte en gras */
-    font-weight: bold;
-    /* arrondi de la bordure */
-    border-radius: 10px;
-    /* zone de remplissage autour du contenu */
-    padding: 75px;
-    /* couleur du fond */
-    background: white;
-}
-
+/* Bouton pour le changement vers la page de l'equipe */
 #oui{
-    /* largeur */
     width: 100%;
-    /* zone de remplissage autour du contenu */
     padding: 12px;
-    /* marge en dessous du bouton */
     margin-bottom: 5px;
-    /* arrondi de la bordure */
     border-radius: 15px;
-    /* texte en gras */
     font-weight: bold;
-    /* couleur du texte */
     color: black;
-    /* pas de bordure */
     border: none;
-    /* taille du texte */
     font-size: 15px;
-    /* couleur dégradé du fond */
     background: green;
-    /* début transition */
     transition: 0.5s;
 }
 #oui:hover{
@@ -215,31 +125,62 @@ body {
 }
 
 #non {
-    /* largeur */
     width: 100%;
-    /* zone de remplissage autour du contenu */
     padding: 12px;
-    /* marge en dessous du bouton */
     margin-bottom: 5px;
-    /* arrondi de la bordure */
     border-radius: 15px;
-    /* texte en gras */
     font-weight: bold;
-    /* couleur du texte */
     color: black;
-    /* pas de bordure */
     border: none;
-    /* taille du texte */
     font-size: 15px;
-    /* couleur dégradé du fond */
     background: #e91d0b;
-    /* début transition */
     transition: 0.5s;
 }
 
 #non:hover {
-    /* augmentation de la taille du bouton */
     transform: scale(1.05);
 }
 
 
+/* Footer */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#footer {
+    background-color:#0e1f5a;
+    border-bottom: 1px solid white;
+    width: 100%;
+    font-size: 1.2vw;
+    color: white;
+    padding: 18px;
+}
+
+#footer td div{
+    margin-bottom: 5px;
+
+}
+
+#copyright{
+    width: 100%;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    background-color:#0e1f5a;
+    font-size: 1.2vw;
+    color: white;
+}
+
+/* popup  */
+#popupTelephone {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    
+}

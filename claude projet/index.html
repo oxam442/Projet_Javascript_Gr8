@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CowalkZilla - Talk Walk Rwar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <script src="home.js" defer></script>
+</head>
+<body>
+    <!-- Menu de navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="CowalkZilla Logo" id="logo">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active" data-page="accueil">Accueil</a></li>
+                <li><a href="about.html" class="nav-link" data-page="about">À Propos</a></li>
+                <li><a href="services.html" class="nav-link" data-page="services">Produits/Services</a></li>
+                <li><a href="team.html" class="nav-link" data-page="team">L'Équipe</a></li>
+                <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+                <li><a href="location.html" class="nav-link" data-page="location">Nous Trouver</a></li>
+            </ul>
+            <div class="nav-info">
+                <div class="clock" id="clock"></div>
+                <div class="timer" id="timer">00:00</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Loading overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Contenu principal -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-image-wrapper">
+                    <img src="images/hero-banner.jpg" alt="CowalkZilla Banner" class="hero-image" id="heroImage">
+                </div>
+                <div class="slogan-container">
+                    <h1 class="slogan" id="slogan"></h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Présentation -->
+        <section class="presentation">
+            <div class="container">
+                <h2>Bienvenue chez CowalkZilla</h2>
+                <p>
+                    CowalkZilla révolutionne la manière dont les équipes collaborent et marchent ensemble vers leurs objectifs.
+                    Notre plateforme innovante combine communication instantanée et gestion de projets pour créer une expérience
+                    de coworking unique et puissante.
+                </p>
+                <p>
+                    Nous croyons que le succès naît de la collaboration, de la transparence et de l'agilité. 
+                    C'est pourquoi nous avons créé des outils qui permettent à votre équipe de rugir ensemble comme un Godzilla !
+                </p>
+            </div>
+        </section>
+
+        <!-- Vidéo de présentation -->
+        <section class="video-section">
+            <div class="container">
+                <h2>Découvrez CowalkZilla</h2>
+                <div class="video-wrapper">
+                    <iframe 
+                        src="" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fil d'actualités -->
+        <section class="news">
+            <div class="container">
+                <h2>Actualités</h2>
+                <ul class="news-list">
+                    <li class="news-item">
+                        <span class="news-date">15 Mai 2026</span>
+                        <p>CowalkZilla franchit le cap des 10 000 utilisateurs actifs ! Notre communauté grandit chaque jour grâce à votre confiance.</p>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-date">02 Mai 2026</span>
+                        <p>Nouvelle fonctionnalité : Le mode collaboration en temps réel est maintenant disponible pour tous les abonnés Premium.</p>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-date">20 Avril 2026</span>
+                        <p>CowalkZilla remporte le prix de l'innovation au salon TechStartup Paris 2026. Une reconnaissance de notre travail !</p>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-date">10 Avril 2026</span>
+                        <p>Lancement de notre application mobile disponible sur iOS et Android. Collaborez où que vous soyez !</p>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-date">25 Mars 2026</span>
+                        <p>Webinaire gratuit : "Comment optimiser la collaboration en équipe distante" - Inscrivez-vous dès maintenant !</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CowalkZilla</h3>
+                    <p>Talk Walk Rwar</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>ISEN Yncréa Ouest - Nantes</p>
+                    <p>33 Avenue du Champ de Manœuvres</p>
+                    <p>44470 Carquefou</p>
+                    <p class="phone-number">Tél : <span class="copyable-phone">+33 2 40 52 40 52</span></p>
+                </div>
+                <div class="footer-section">
+                    <p>&copy; 2026 CowalkZilla. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/home.js" defer></script>
+</body>
+</html>

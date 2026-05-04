@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Donnée de la page -->
+<!-- Donnée de la page -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- fichier css -->
-    <link rel="stylesheet" href="../styles/digitalClock.css">
+    <!-- fichier css -->
+    <link rel="stylesheet" href="../styles/produit.css">
     <link rel="stylesheet" href="../styles/menu.css">
     <!-- fichier js -->
-    <script src="../scripts/digitalClock.js" defer></script>
+    <script src="../scripts/produit.js" defer></script>
     <script src="../scripts/menu.js" defer></script>
     <!-- titre -->
-    <title>Document</title> 
-    <link rel="stylesheet" href="../styles/navbar.css">
-
-    
+    <title>navbar</title>
 </head>
-<body oncopy="plagiat()">
+
+
+<!-- contenu de la page -->
+<body id="haut" oncopy="plagiat()">
+    <!-- en-tete de la page -->
     <header>
         <div id="menu">
             <!-- logo -->
@@ -30,80 +31,76 @@
             <!-- lien vers la page : Produits/services -->
             <a href="produit.html" onclick="changePage(event,this), background(this)">PRODUITS/SERVICES</a>
             <!-- lien vers la page : Equipe -->
-            <a href="equipe.html" onclick="changeConfirm(event), background(this)">EQUIPE</a>
+            <a href="equipe.html" onclick="changeConfirm(event)">EQUIPE</a>
             <!-- lien vers la page : Contact -->
             <a href="contact.html" onclick="changePage(event,this), background(this)">CONTACT</a>
             <!-- lien vers la page : Nous trouver -->
             <a href="api.html" onclick="changePage(event,this), background(this)">NOUS TROUVER</a>
-            <!-- timer de durée sur la page -->
-            <a id="timer" style="background: none;padding:0px; margin: 0px;">timer : 00:00</a>
-            <!-- horloge -->
-            <a href="https://www.youtube.com/watch?v=E4WlUXrJgy4&msockid=721eed81423c11f1b0c55f70f7c9072b" target="_blank" style="background: none;padding:0px; margin: 0px;">
-            <div id="clock" class="clock">
-                <div id="hours-tens"></div>
-                <div id="hours-units"></div>
-                <div id="colon" class="colon">:</div>
-                <div id="minutes-tens"></div>
-                <div id="minutes-units"></div>
-            </div>
-            </a>
+            <!-- horloge + chronomètre-->
+            <a href="https://www.youtube.com/watch?v=E4WlUXrJgy4&msockid=721eed81423c11f1b0c55f70f7c9072b" id="horloge" target="_blank"></a>
         </div>
     </header>
 
     <!-- Popup de chargement d'une page -->
     <div id="popupLoader">
-        <div class="popupLoaderClass">
+        <div class="popupClass">
             <p>Chargement en cours...</p>
             <div class="loader"></div>
         </div>
     </div>
 
     <!-- popup confirmation pour aller sur la page équipe -->
-    <div id="popupConfirm">
-        <div class="popupConfirmClass">
+    <div id="popupConfirm" >
+        <div class="popupClass">
             <p>Voulez-vous aller vers cette page ?</p>
             <a href="equipe.html">
-                <button id="oui" onclick="changePageEquipe(event,this)">OUI</button>
+                <button id="oui" onclick="changePageEquipe(event,this), background(this)">OUI</button>
             </a>
             <button id="non" onclick="confirmCancel()">NON</button>
         </div>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <!-- <footer>
+
+    <!-- popup telephone -->
+    <div id="popupTelephone">
+        <div class="popupClass">
+            <div></div>
+            <input type="text" oninput="verificationTel()" id="value">
+            <button id="boutonTelephone">Appeler</button>
+        </div> 
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
         <table id="footer">
             <tr>
                 <td id="footerBrest">
-                    <p>ISEN Brest</p>
-                    <img src="ISEN_brest_logo.jpg" id="imgBrest">
-                    <p id="telBrest">téléphone : +33 (0)2 98 03 84 00</p>
-                    <p id="mailBrest">mail : brest@isen-ouest.yncrea.fr</p>
+                    <div>ISEN Brest</div>
+                    <div id="telBrest" data-tel="+33298038400" oncopy="stockNum(this), changeTel()">téléphone : +33298038400</div>
+                    <div id="mailBrest">mail : brest@isen-ouest.yncrea.fr</div>
                 </td>
                 <td id="footerNantes">
-                    <p>ISEN Nantes</p>
-                    <img src="ISEN_nantes_logo.jpg" id="imgNantes">
-                    <p id="telNantes"> téléphone : +33 (0)2 30 13 05 60</p>
-                    <p id="mailNantes">mail : nantes@isen-ouest.yncrea.fr</p>
+                    <div>ISEN Nantes</div>
+                    <div id="telNantes" data-tel="+33230130560" oncopy="stockNum(this), changeTel()"> téléphone : +33230130560</div>
+                    <div id="mailNantes">mail : nantes@isen-ouest.yncrea.fr</div>
                 </td>
                 <td id="footerCaen">
-                    <p>ISEN Caen</p>
-                    <img src="ISEN_caen_logo.jpg" id="imgCaen">
-                    <p id="telCaen">téléphone : +33 (0)2 30 31 03 20</p>
-                    <p id="mailCaen">mail : caen@isen-ouest.yncrea.fr</p>
+                    <div>ISEN Caen</div>
+                    <div id="telCaen" data-tel="+33230310320" oncopy="stockNum(this), changeTel()">téléphone : +33230310320</div>
+                    <div id="mailCaen">mail : caen@isen-ouest.yncrea.fr</div>
                 </td>
                 <td id="footerRennes">
-                    <p>ISEN Rennes</p>
-                    <img src="ISEN_rennes_logo.jpg" id="imgRennes">
-                    <p id="telRennes">téléphone : +33 (0)2 30 13 02 50</p>
-                    <p id="mailRennes">mail : rennes@isen-ouest.yncrea.fr</p>
+                    <div>ISEN Rennes</div>
+                    <div id="telRennes" data-tel="+33230130250" oncopy="stockNum(this), changeTel()">téléphone : +33230130250</div>
+                    <div id="mailRennes">mail : rennes@isen-ouest.yncrea.fr</div>
                 </td>
                 <td id="footerParis">
-                    <p>ISEN Paris</p>
-                    <img src="ISEN_paris_logo.jpg" id="imgParis">
-                    <p id="telParis">téléphone : +33 (0)2 30 31 30 40</p>
-                    <p id="mailParis">mail : paris@isen-ouest.yncrea.fr</p>
+                    <div>ISEN Paris</div>
+                    <div id="telParis" data-tel="+33230313040" oncopy="stockNum(this), changeTel()">téléphone : +33230313040</div>
+                    <div id="mailParis">mail : paris@isen-ouest.yncrea.fr</div>
                 </td>
             </tr>
         </table>
-    </footer> -->
+        <div id="copyright">  © 2026 CowalkZilla. Tous droits réservés.</div>
+    </footer>
 </body>
 </html>
