@@ -69,27 +69,29 @@
         </div> 
     </div>
 
-    <form name="formContact">
-        <div>
+    <div class="container">
+        <form name="formContact">
+            <div>
             <input type="text" id="nomContact" placeholder="Prénom Nom" oninput="azerty(), verif()">
-            <div id="nomRule">
-                *le nom n'est pas conforme !
+                <div id="nomRule">
+                    *le nom n'est pas conforme !
+                </div>
+            </div> 
+            <div>
+                <input type="text" id="mailContact" placeholder="email@exemple.com" oninput="qwerty(), verif()"> 
+                <div id="mailRule">
+                    l'email n'est pas conforme !
+                </div>
             </div>
-        </div> 
-        <div>
-            <input type="text" id="mailContact" placeholder="email@exemple.com" oninput="qwerty(), verif()"> 
-            <div id="mailRule">
-                l'email n'est pas conforme !
+            <div>
+                <textarea type="text" id="messageContact" placeholder="Votre message (1000 caractères maximum)" oninput="zqsd(), verif()"></textarea>
+                <div id="messageRule">
+                    message n'est pas conforme !
+                </div>
             </div>
-        </div>
-        <div>
-            <input type="text" id="messageContact" placeholder="Votre message (1000 caractères maximum)" oninput="zqsd(), verif()">
-            <div id="messageRule">
-                message n'est pas conforme !
-            </div>
-        </div>
-        <button id="submitButton">submit</button>
-    </form>
+            <button id="submitButton" disabled>submit</button>
+        </form>
+    </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer>
         <table id="footer">

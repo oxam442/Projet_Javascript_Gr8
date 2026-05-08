@@ -100,6 +100,11 @@ function verificationTel(){
 }
 
 function appel(){
+    let audio = document.getElementById("audio");
+    audio.play();
+    setTimeout(()=>{
+        audio.pause();
+    },5000);
     console.log("vous appelez ce numéro : "+ numeroTel);
 
     document.getElementById("popupTelephone").style.display="none";
