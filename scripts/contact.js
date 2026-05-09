@@ -55,31 +55,24 @@ function zqsd(){
     }
 }
 
-function click(){
-    alert("ok");
-}
-
 function verif(){
-    //  rester sur la meme page et eviter de reinitialiser
-    // e.preventDefault()
     if (zqsd()==true && azerty()==true && qwerty()==true){ 
-        document.getElementById("submitButton").addEventListener("click",click); 
         document.getElementById("submitButton").style.backgroundColor="blue";  
         document.getElementById("submitButton").disabled=false;
     }
     else{
-        document.getElementById("submitButton").removeEventListener("click",click);
         document.getElementById("submitButton").style.backgroundColor="gray";
         document.getElementById("submitButton").disabled=true;
     } 
 }
 
 // Jeu
-let cpt=null;
+let cpt=0;
 function clickJeu(){
     cpt++;
 }
-function jeu(){
+function jeu(event){
+    event.preventDefault();
     let thon=document.getElementById("jeu").style.display="flex";
     let bar=document.getElementById("jeuButton");
     cpt=0;
@@ -91,22 +84,26 @@ function jeu(){
         timeLeft--;
         // partie affichage à ajouter
         if (timeLeft<=0){
-            bar.disabled=true;
+            bar.disabled=true; 
             bar.removeEventListener("click",clickJeu);
-            clearInterval(interval);
+            clearInterval(time);
             let cps= cpt/10;
             // partie affichage à ajouter
-            if(cps>9){
+            if(cps>8){
                 document.getElementById("jeu").style.display="none";
                 document.getElementById("win").style.display="flex";
-                await wait(3000);
-                document.getElementById("win").style.display="none";
+                setTimeout(()=>{
+                    window.location.href="../html/contact.html";
+                },3000);
+                
             }
             else{
                 document.getElementById("jeu").style.display="none";
+
                 document.getElementById("loose").style.display="flex";
-                await wait(3000);
-                document.getElementById("loose").style.display="none";
+                setTimeout(()=>{
+                    window.location.href="../html/contact.html";
+                },3000);
             }
         }
     }, 1000);
