@@ -25,3 +25,49 @@ function changeSmiley(){
         document.getElementById("popupSmiley").style.display="none";
     },3000);
 }
+
+
+// filter
+
+// base de donnée avec const à faire
+const product=[];
+function comparePrice(min, max, price){
+    if ((price<=max && price>=min)||(price<=max && min=='')||(max=='' && price>=min)||(min=='' && max=='')){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+function compareWord(word, product){
+    if (word==product ||word==''){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+function compareCategorie(categorie, productCategorie){
+    if (categorie==productCategorie || categorie==''){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function filter(){
+    let cpt=0;
+    for (let i=0;i<product.length;i++){
+        if (comparePrice()==true && compareCategorie()==true && compareWord()==true){
+            // display
+            cpt++;
+        }
+        else {
+            // non display
+        }
+    }
+    if (cpt==0){
+        // display message erreur
+    }
+}
