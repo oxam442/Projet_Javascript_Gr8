@@ -2,14 +2,22 @@
     align-items: center;
     justify-content: center;
     display: flex;
+    background-color:var(--light-color);
+    border: 1px solid rgba(0,0,0,0.05);
+    padding: 10px;
+    font-size: 15px;
+    box-shadow: var(--shadow);
+    width: 38vw;
+    height: 34vw;
+
 }
 input{
     width: 50vw;
     height: 3vw;
-}
+} 
 textarea{
     width: 50vw;
-    height: 25vw;
+    height: 20vw;
 }
 #nomRule{
     display: none;
@@ -23,6 +31,8 @@ textarea{
 #submitButton{
     display: flex;
 }
+
+
 #jeu{ 
     display: none;
     justify-content: center;
@@ -34,6 +44,8 @@ textarea{
     position: fixed;
     
 }
+
+
 #win{
     display: none;
     justify-content: center;
@@ -45,6 +57,8 @@ textarea{
     position: fixed;
     
 }
+
+
 #loose{
     display: none;
     justify-content: center;

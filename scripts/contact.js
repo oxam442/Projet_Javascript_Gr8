@@ -108,4 +108,4 @@ function jeu(event){
         }
     }, 1000);
 }
-
+ 
