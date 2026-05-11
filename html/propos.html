@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- Donnée de la page -->
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- fichier css -->
-    <link rel="stylesheet" href="../styles/propos.css">
     <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="stylesheet" href="../styles/propos.css">
+    <link rel="stylesheet" href="../styles/popup.css">
+
     <!-- fichier js -->
     <script src="../scripts/propos.js" defer></script>
     <script src="../scripts/menu.js" defer></script>
+
     <!-- titre -->
     <link href="https://fonts.cdnfonts.com/css/digital" rel="stylesheet">
     <title>À propos - CoWalkZilla</title>
 </head>
 
-<!-- contenu de la page -->
+
 <body id="haut" oncopy="plagiat()">
-    <!-- en-tete de la page -->
+    <!-- Navigation -->
     <header>
-        <!-- Navigation -->
         <div id="menu">
             <a href="accueil.html" onclick="changePage(event,this), background(this)">
                 <img src="../images/logo.png" id="logo"> 
@@ -34,33 +36,8 @@
         </div>
     </header>
 
-    <!-- Popup de chargement d'une page -->
-    <div id="popupLoader">
-        <div class="popupClass">
-            <p>Chargement en cours...</p>
-            <div class="loader"></div>
-        </div>
-    </div>
 
-    <!-- popup confirmation pour aller sur la page équipe -->
-    <div id="popupConfirm" >
-        <div class="popupClass">
-            <p>Voulez-vous aller vers cette page ?</p>
-            <a href="equipe.html">
-                <button id="oui" onclick="changePageEquipe(event,this), background(this)">OUI</button>
-            </a>
-            <button id="non" onclick="confirmCancel()">NON</button>
-        </div>
-    </div>
-
-    <!-- popup telephone -->
-    <div id="popupTelephone">
-        <div class="popupClass">
-            <div></div>
-            <input type="text" oninput="verificationTel()" id="value">
-            <button id="boutonTelephone">Appeler</button>
-        </div> 
-    </div>
+    <!-- contenu page -->
     <h1>A propos</h1>
     <section class="history">
         <h2>Notre histoire</h2>
@@ -128,6 +105,7 @@
             </div>
         </div>
     </section>
+
     <section class="missions">
         <div class="container">
             <h2>Nos Missions</h2>
@@ -137,39 +115,33 @@
                     <h3>Faciliter la Collaboration</h3>
                     <p class="mission-preview">
                         Créer des outils intuitifs qui permettent aux équipes de collaborer efficacement,
-                        où qu'elles soient dans le monde...
+                        où qu'elles soient dans le monde. Chez CowalkZilla, nous croyons que...
                     </p>
                 </li>
                 <li class="mission-item" onclick="modal(2)">
                     <h3>Innover Constamment</h3>
                     <p class="mission-preview">
                         Rester à la pointe de la technologie en développant des fonctionnalités innovantes
-                        qui anticipent les besoins de demain...
+                        qui anticipent les besoins de demain. Notre équipe R&D travaille...
                     </p>
                 </li>
                 <li class="mission-item" onclick="modal(3)">
                     <h3>Démocratiser l'Accès</h3>
                     <p class="mission-preview">
                         Rendre nos outils accessibles à tous, des petites startups aux grandes entreprises,
-                        avec une attention particulière à l'expérience utilisateur...
+                        avec une attention particulière à l'expérience utilisateur. Nous offrons...
                     </p>
                 </li>
                 <li class="mission-item" onclick="modal(4)">
                     <h3>Construire une Communauté</h3>
                     <p class="mission-preview">
                         Créer un écosystème d'utilisateurs engagés qui partagent leurs bonnes pratiques
-                        et s'entraident mutuellement...
+                        et s'entraident mutuellement. Notre communauté est le cœur battant de...
                     </p>
                 </li>
             </ul>
         </div>
     </section>
-    
-    <!-- Popup mission -->
-    <div id="popupmission">
-        <div class="popupClass">
-        </div>
-    </div>
 
     <section class="vision">
         <div class="container">
@@ -195,6 +167,39 @@
             </div>
         </div>
     </section>
+
+
+    <!-- Popup -->
+    <div id="popupMission"></div>
+
+    <!-- Popup de chargement d'une page -->
+    <div id="popupLoader">
+        <div class="popupClass">
+            <p>Chargement en cours...</p>
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <!-- popup confirmation pour aller sur la page équipe -->
+    <div id="popupConfirm" >
+        <div class="popupClass">
+            <p>Voulez-vous aller vers cette page ?</p>
+            <a href="equipe.html">
+                <button id="oui" onclick="changePageEquipe(event,this), background(this)">OUI</button>
+            </a>
+            <button id="non" onclick="confirmCancel()">NON</button>
+        </div>
+    </div>
+
+    <!-- popup telephone -->
+    <div id="popupTelephone">
+        <div class="popupClass">
+            <div></div>
+            <input type="text" oninput="verificationTel()" id="value">
+            <button id="boutonTelephone">Appeler</button>
+        </div> 
+    </div>
+
 
     <footer>
         <table id="footer">

@@ -11,9 +11,28 @@
     --shadow:0 3px 10px rgba(0,0,0,0.1);
 }
 @import url('https://fonts.cdnfonts.com/css/digital');
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: var(--light-color);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--text-color);
+}
+
+h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
 }
 
 
@@ -57,87 +76,7 @@ body {
     height: clamp(10px, 5vw,60px);
 }
 
-
-/* popup  */
-#popupConfirm {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    
-}
-
-#popupLoader {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    
-}
-/* modifier ici, c'est déjà une class */
-.popupClass {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 10px;
-    padding: 75px;
-    background: white;
-}
-
-/* Loader rond */
-.loader{
-    width: 55px;
-    height: 55px;
-    border: 6px solid white;
-    border-radius: 50%;
-    border-bottom-color: var(--accent-color);
-    display: inline-block;
-    animation: rotation 1s linear infinite;
-}
-    @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/* Bouton pour le changement vers la page de l'equipe */
-#oui,#non{
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 5px;
-    border-radius: 15px;
-    font-weight: bold;
-    color: var(--text-color);
-    border: none;
-    font-size: 15px;
-    background: green;
-    transition: var(--transition);
-}
-#non{
-    background:red;
-}
-#oui:hover, #non:hover{
-    transform: scale(1.05);
-}
-
-
 /* Footer */
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
 
 #footer {
     background-color:var(--dark-color);
@@ -165,18 +104,6 @@ body {
 #tel {
     color: var(--accent-color);
 }
-/* popup  */
-#popupTelephone {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    
-}
 
 .container {
     max-width: 1200px;
@@ -184,6 +111,4 @@ body {
     padding: 0 10%;
 }
 
-h1{
-    text-align: center;
-}
+

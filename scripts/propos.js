@@ -1,3 +1,4 @@
+// base de donnée
 const missionsData = {
     1: {
         title: "Faciliter la Collaboration",
@@ -7,7 +8,7 @@ const missionsData = {
         tableaux collaboratifs en temps réel, et des outils de communication intégrés qui facilitent 
         l'échange d'idées et la prise de décision collective. Nous investissons continuellement dans 
         l'amélioration de l'expérience utilisateur pour que chaque interaction soit fluide et naturelle.`
-    },
+    }, 
     2: {
         title: "Innover Constamment",
         description: `Rester à la pointe de la technologie en développant des fonctionnalités innovantes 
@@ -40,18 +41,25 @@ const missionsData = {
     }
 };
 
+// fonction pour afficher dans un popup les missions
 function modal(number){
-    let thon = document.getElementById("popupmission");
+    // récupération de l'id
+    let mission = document.getElementById("popupMission");
+    // affichage de la popup
     let content= `
-        <div id="buttonclose" onclick="modalClose()">X</div>
-        <h2>${missionsData[number].title}</h2>
-        <p class="full-description">${missionsData[number].description}</p>
+        <div class="popupClass">
+            <div id="buttonclose" onclick="modalClose()">X</div>
+            <h2>${missionsData[number].title}</h2>
+            <div>${missionsData[number].description}</div>
+        </div>
     `;
-    thon.children[0].innerHTML=content;
-    thon.style.display="flex";
+    // afficher le contenu et le popup
+    mission.innerHTML=content;
+    mission.style.display="flex";
 }
 
+// permet de fermer la page popup
 function modalClose(){
-    document.getElementById("popupmission").style.display="none";
+    document.getElementById("popupMission").style.display="none";
 }
 
