@@ -2,11 +2,20 @@
     align-items: center;
     justify-content: center;
     display: flex;
+    background-color: green;
+    border: 1px solid rgba(0,0,0,0.05);
+    padding: 10px;
+    font-size: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    width: 40vw;
+    height: 35vw;
+    margin: 25px;
+
 }
 input{
     width: 50vw;
     height: 3vw;
-}
+} 
 textarea{
     width: 50vw;
     height: 25vw;
@@ -23,6 +32,8 @@ textarea{
 #submitButton{
     display: flex;
 }
+
+
 #jeu{ 
     display: none;
     justify-content: center;
@@ -34,6 +45,8 @@ textarea{
     position: fixed;
     
 }
+
+
 #win{
     display: none;
     justify-content: center;
@@ -45,6 +58,8 @@ textarea{
     position: fixed;
     
 }
+
+
 #loose{
     display: none;
     justify-content: center;
