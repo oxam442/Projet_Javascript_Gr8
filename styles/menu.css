@@ -19,28 +19,27 @@ body {
 /* menu */
 #menu {
     width:75%;
-    height: 80px;
+    height: 15%;
     background-color: var(--dark-color);
-    border-radius: 45px;
+    border-radius: 40px;
     margin: 20px auto;
-    margin-top: 25px;
     font-size: 1.1vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3%;
+    gap: 2%;
     
 }
 
 #menu a{
     color: white;
     text-decoration: none;
+    padding: 1%;
+    border-radius: var(--border-radius);
 }
 
 #menu a:hover:not(#horloge) {
     background: var(--primary-color);
-    padding: 10px;
-    border-radius: 6px;
 }
 
 #horloge{
@@ -114,7 +113,7 @@ body {
 }
 
 /* Bouton pour le changement vers la page de l'equipe */
-#oui{
+#oui,#non{
     width: 100%;
     padding: 12px;
     margin-bottom: 5px;
@@ -124,27 +123,13 @@ body {
     border: none;
     font-size: 15px;
     background: green;
-    transition: 0.5s;
+    transition: var(--transition);
 }
-#oui:hover{
+#non{
+    background:red;
+}
+#oui:hover, #non:hover{
     /* augmentation de la taille du bouton */
-    transform: scale(1.05);
-}
-
-#non {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 5px;
-    border-radius: 15px;
-    font-weight: bold;
-    color: var(--text-color);
-    border: none;
-    font-size: 15px;
-    background: red;
-    transition: 0.5s;
-}
-
-#non:hover {
     transform: scale(1.05);
 }
 
@@ -197,5 +182,5 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10%;
 }

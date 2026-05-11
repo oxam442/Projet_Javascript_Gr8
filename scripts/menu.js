@@ -58,18 +58,13 @@ function plagiat(){
 function horloge(){
     // récupère l'id de l'horloge et du chronomètre
     let horloge = document.getElementById("horloge");
-    //  définition variable minute et seconde
-    let minuteChrono = 0;
-    let secondeChrono = 0;
+    let Timer = 0;
     setInterval(()=>{
     const time = new Date();
     // ajoute une seconde
-    secondeChrono++;
-    if (secondeChrono==60){
-        // passage des secondes en minutes
-        minuteChrono++;
-        secondeChrono=0;
-    }
+    Timer++;
+    let minuteChrono = Math.floor(Timer/60);
+    let secondeChrono = Timer % 60;
     // affichage de l'horloge et du chronomètre
     horloge.innerText=`${time.toLocaleTimeString('fr-FR')} | ${String(minuteChrono).padStart(2,"0")}:${String(secondeChrono).padStart(2,"0")}s`;}
     ,1000);

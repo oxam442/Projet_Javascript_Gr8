@@ -1,3 +1,8 @@
+.history{
+    background-color: white;
+    padding: 4rem 0;
+}
+
 .propos{
     flex: 1;
     background-color: var(--light-color);
@@ -6,11 +11,59 @@
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     transition: var(--transition);
     margin-bottom: 2rem;
+    font-size: 90%;
 }
-.propos h3 {
+h3 {
     color: var(--secondary-color);
     margin-bottom: 0.5rem;
 }
 .propos:hover{
     transform: scale(1.05);
+}
+
+.missions {
+    background-color: var(--light-color);
+    padding: 4rem 0;
+}
+
+.missions .intro,h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.mission-list{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mission-item{
+    flex: 1;
+    background-color: var(--light-color);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: var(--transition);
+    margin-bottom: 2rem;
+    font-size: 90%;
+}
+
+.mission-item:hover{
+    transform: translateY(-10px);
+    color: white;
+    background-color: var(--accent-color);
+}
+
+.mission-item:hover h3,
+.mission-item:hover .mission-preview {
+    color: white;
+}
+
+.mission-preview {
+    color: var(--text-color);
+    line-height: 1.6;
 }
