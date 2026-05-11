@@ -1,8 +1,6 @@
 const missionsData = {
     1: {
         title: "Faciliter la Collaboration",
-        icon: "🚀",
-        image: "images/mission1.jpg",
         description: `Créer des outils intuitifs qui permettent aux équipes de collaborer efficacement, 
         où qu'elles soient dans le monde. Chez CowalkZilla, nous croyons que la distance ne devrait jamais 
         être un obstacle à la productivité. Nos solutions incluent des espaces de travail partagés, des 
@@ -12,8 +10,6 @@ const missionsData = {
     },
     2: {
         title: "Innover Constamment",
-        icon: "💡",
-        image: "images/mission2.jpg",
         description: `Rester à la pointe de la technologie en développant des fonctionnalités innovantes 
         qui anticipent les besoins de demain. Notre équipe R&D travaille sans relâche pour intégrer les 
         dernières avancées en intelligence artificielle, en apprentissage automatique et en analyse de 
@@ -24,8 +20,6 @@ const missionsData = {
     },
     3: {
         title: "Démocratiser l'Accès",
-        icon: "🌍",
-        image: "images/mission3.jpg",
         description: `Rendre nos outils accessibles à tous, des petites startups aux grandes entreprises, 
         avec une attention particulière à l'expérience utilisateur. Nous offrons des plans tarifaires 
         flexibles adaptés à tous les budgets, y compris une version gratuite généreuse pour les petites 
@@ -36,8 +30,6 @@ const missionsData = {
     },
     4: {
         title: "Construire une Communauté",
-        icon: "🤝",
-        image: "images/mission4.jpg",
         description: `Créer un écosystème d'utilisateurs engagés qui partagent leurs bonnes pratiques 
         et s'entraident mutuellement. Notre communauté est le cœur battant de CowalkZilla. Nous organisons 
         régulièrement des webinaires, des événements de networking et des hackathons pour permettre aux 
@@ -48,19 +40,18 @@ const missionsData = {
     }
 };
 
-function modal(missionId){
-    let modal = document.getElementById("missionModal");
-    let body = document.getElementById("modalBody");
-    let mission = missionsData[missionId];
+function modal(number){
+    let thon = document.getElementById("popupmission");
     let content= `
-        <h2>${mission.title}</h2>
-        <img src="${mission.image}" alt="${mission.title}" onerror="this.style.display='none'">
-        <p class="full-description">${mission.description}</p>
+        <div id="buttonclose" onclick="modalClose()">X</div>
+        <h2>${missionsData[number].title}</h2>
+        <p class="full-description">${missionsData[number].description}</p>
     `;
-    body.innerHTML = content;
-    modal.classList.add('active');
+    thon.children[0].innerHTML=content;
+    thon.style.display="flex";
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    setupMissionClicks();
-});
+function modalClose(){
+    document.getElementById("popupmission").style.display="none";
+}
+

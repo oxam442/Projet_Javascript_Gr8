@@ -64,7 +64,7 @@ function verif(){
         document.getElementById("submitButton").style.backgroundColor="gray";
         document.getElementById("submitButton").disabled=true;
     } 
-}
+} 
 
 // Jeu
 let cpt=0;
