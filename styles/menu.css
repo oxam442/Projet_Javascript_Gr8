@@ -52,9 +52,7 @@ body {
 }
 
 #logo {
-    /* largeur en fonction de la taille de l'ecran */
     width: clamp(10px, 5vw,60px);
-    /* hauteur en fonction de la taille de l'ecran */
     height: clamp(10px, 5vw,60px);
 }
 
@@ -99,7 +97,7 @@ body {
     height: 55px;
     border: 6px solid white;
     border-radius: 50%;
-    border-bottom-color: #e96b0b;
+    border-bottom-color: var(--accent-color);
     display: inline-block;
     animation: rotation 1s linear infinite;
 }
@@ -129,7 +127,6 @@ body {
     background:red;
 }
 #oui:hover, #non:hover{
-    /* augmentation de la taille du bouton */
     transform: scale(1.05);
 }
 
