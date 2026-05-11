@@ -1,9 +1,9 @@
-.history{
+.history,.vision{
     background-color: white;
     padding: 4rem 0;
 }
 
-.propos{
+.propos, .mission-item, .vision-content{
     flex: 1;
     background-color: var(--light-color);
     padding: 1.5rem;
@@ -39,17 +39,6 @@ h3 {
     gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
-}
-
-.mission-item{
-    flex: 1;
-    background-color: var(--light-color);
-    padding: 1.5rem;
-    border-radius: var(--border-radius);
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    transition: var(--transition);
-    margin-bottom: 2rem;
-    font-size: 90%;
 }
 
 .mission-item:hover{
