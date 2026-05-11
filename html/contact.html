@@ -39,7 +39,7 @@
             <!-- horloge + chronomètre-->
             <a href="https://www.youtube.com/watch?v=E4WlUXrJgy4&msockid=721eed81423c11f1b0c55f70f7c9072b" id="horloge" target="_blank"></a>
         </div>
-    </header>
+    </header> 
 
     <!-- Popup de chargement d'une page -->
     <div id="popupLoader">
@@ -69,28 +69,50 @@
         </div> 
     </div>
 
-    <form name="formContact">
-        <div>
+    <!-- formulaire -->
+    <div class="container">
+        <form name="formContact">
+            <div>
             <input type="text" id="nomContact" placeholder="Prénom Nom" oninput="azerty(), verif()">
-            <div id="nomRule">
-                *le nom n'est pas conforme !
+                <div id="nomRule">
+                    *le nom n'est pas conforme !
+                </div>
+            </div> 
+            <div>
+                <input type="text" id="mailContact" placeholder="email@exemple.com" oninput="qwerty(), verif()"> 
+                <div id="mailRule">
+                    l'email n'est pas conforme !
+                </div>
             </div>
-        </div> 
-        <div>
-            <input type="text" id="mailContact" placeholder="email@exemple.com" oninput="qwerty(), verif()"> 
-            <div id="mailRule">
-                l'email n'est pas conforme !
+            <div>
+                <textarea type="text" id="messageContact" placeholder="Votre message (1000 caractères maximum)" oninput="zqsd(), verif()"></textarea>
+                <div id="messageRule">
+                    message n'est pas conforme !
+                </div>
             </div>
+            <button id="submitButton" disabled onclick="jeu(event)">submit</button>
+        </form>
+    </div>
+    <!-- Popup jeu -->
+    <div id="jeu">
+        <div class="popupClass">
+            <p>le jeu va commencer dans </p>
+            <button id="jeuButton">click here</button>
         </div>
-        <div>
-            <input type="text" id="messageContact" placeholder="Votre message (1000 caractères maximum)" oninput="zqsd(), verif()">
-            <div id="messageRule">
-                message n'est pas conforme !
-            </div>
+    </div>
+    <!-- popup win -->
+    <div id="win">
+        <div class="popupClass">
+            <p>Gagné le formulaire z bien été envoyé</p>
         </div>
-        <button id="submitButton">submit</button>
-    </form>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <!-- popup loose -->
+    <div id="loose">
+        <div class="popupClass">
+            <p>Perdu le formulaire va se réinitialiser</p>
+        </div>
+    </div>
+
     <footer>
         <table id="footer">
             <tr>

@@ -48,7 +48,6 @@
     border-radius: 15px;
     color: #1e293b;
     transition: all 0.2s; 
-    /* police */
     font-family: Arial;    
 }
 
@@ -82,7 +81,7 @@ button {
 
 button:hover {
     transform: scale(1.05);
-}
+} 
 
 
 /* achat */

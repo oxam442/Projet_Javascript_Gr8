@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: center; 
+    margin: 20px;
+    gap: 20px;
+    padding: 20px;
+    /* retour à la ligne s'il n'y a plus de place sur la ligne */
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 300px; 
+    height: 300px; 
+    padding: 10px;
+    font-size: 15px; 
+    background: #f4f5fb;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 15px;
+    color: #1e293b;
+    transition: all 0.2s; 
+    font-family: Arial;    
+    overflow: hidden;
+}
+
+.map{
+    height: 200px;
+    width: 100%;
+}
