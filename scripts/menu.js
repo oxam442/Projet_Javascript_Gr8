@@ -109,5 +109,3 @@ function appel(){
 
     document.getElementById("popupTelephone").style.display="none";
 }
-
-
