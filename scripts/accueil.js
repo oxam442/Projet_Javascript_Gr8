@@ -30,9 +30,4 @@ function animation(){
         }
     }, 1500);
 }
-
-
-function slogan(){
-    write();
-}
-slogan();
+write();
