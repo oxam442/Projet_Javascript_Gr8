@@ -72,23 +72,25 @@
     <h1>Contact</h1>
     <!-- formulaire --> 
     <div class="container">
+        
         <form name="formContact">
+            <h2>Formulaire de Contact</h2>
             <div>
             <input type="text" id="nomContact" placeholder="Prénom Nom" oninput="azerty(), verif()">
-                <div id="nomRule">
-                    *le nom n'est pas conforme !
+                <div id="nomRule" style="color: red">
+                    Le nom doit contenir exactement 2 mots séparés par un espace (Prénom Nom)
                 </div>
             </div> 
             <div>
                 <input type="text" id="mailContact" placeholder="email@exemple.com" oninput="qwerty(), verif()"> 
-                <div id="mailRule">
-                    l'email n'est pas conforme !
+                <div id="mailRule" style="color: red">
+                    L'email doit contenir un @ et un point
                 </div>
             </div>
             <div>
                 <textarea type="text" id="messageContact" placeholder="Votre message (1000 caractères maximum)" oninput="zqsd(), verif()"></textarea>
-                <div id="messageRule">
-                    message n'est pas conforme !
+                <div id="messageRule" style="color: red">
+                    Minimum 20 caractères requis
                 </div>
             </div>
             <button id="submitButton" disabled onclick="jeu(event)">submit</button>

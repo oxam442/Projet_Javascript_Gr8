@@ -39,7 +39,7 @@ function qwerty(){
 
 function zqsd(){
     let thon = document.getElementById("messageContact");
-    if (thon.value.length>20 && thon.value.length<1000){  
+    if (thon.value.length>19 && thon.value.length<1000){  
         document.getElementById("messageRule").style.display="none";
         thon.style.border="2px solid green";
         return true;
@@ -57,11 +57,11 @@ function zqsd(){
 
 function verif(){
     if (zqsd()==true && azerty()==true && qwerty()==true){ 
-        document.getElementById("submitButton").style.backgroundColor="blue";  
+        document.getElementById("submitButton").style.background="var(--primary-color)";  
         document.getElementById("submitButton").disabled=false;
     }
     else{
-        document.getElementById("submitButton").style.backgroundColor="gray";
+        document.getElementById("submitButton").style.background="var(--secondary-color)";
         document.getElementById("submitButton").disabled=true;
     } 
 } 
