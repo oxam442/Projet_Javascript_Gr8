@@ -39,7 +39,7 @@ body {
     border-radius: var(--border-radius);
 }
 
-#menu a:hover:not(#horloge) {
+#menu a:hover:not(#horloge, #logo-content){
     background: var(--primary-color);
 }
 
