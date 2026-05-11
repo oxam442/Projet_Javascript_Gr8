@@ -2,14 +2,13 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    background-color: green;
+    background-color:var(--light-color);
     border: 1px solid rgba(0,0,0,0.05);
     padding: 10px;
     font-size: 15px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    width: 40vw;
-    height: 35vw;
-    margin: 25px;
+    box-shadow: var(--shadow);
+    width: 38vw;
+    height: 34vw;
 
 }
 input{
@@ -18,7 +17,7 @@ input{
 } 
 textarea{
     width: 50vw;
-    height: 25vw;
+    height: 20vw;
 }
 #nomRule{
     display: none;
