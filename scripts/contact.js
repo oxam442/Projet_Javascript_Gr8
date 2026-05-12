@@ -99,7 +99,6 @@ function jeu(event){
             }
             else{
                 document.getElementById("jeu").style.display="none";
-
                 document.getElementById("loose").style.display="flex";
                 setTimeout(()=>{
                     window.location.href="../html/contact.html";

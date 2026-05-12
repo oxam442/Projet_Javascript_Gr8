@@ -104,10 +104,10 @@ function changePageTel(){
     let content= `
         <div class="popup">
             <div id="buttonclose" onclick="modalClose()">X</div>
-            <div>Confirmer le numéro suivant ${numeroTel}.</div>
-            <input type="text" oninput="verificationNum()" id="value">
-            <audio id="audio" src=""></audio> 
-            <button id="boutonTelephone">Appeler</button>
+            <div style="margin-bottom:8px">Confirmer le numéro suivant ${numeroTel}.</div>
+            <input type="text" oninput="verificationNum()" id="value" placeholder="Numero à entrée">
+            <audio id="audio" src="../son_appel.mp3"></audio> 
+            <button id="buttonTelephone">Appeler</button>
     `;
     popup.innerHTML=content;
     popup.style.display="flex";
@@ -116,10 +116,10 @@ function changePageTel(){
 function verificationNum(){
     let value=document.getElementById("value").value;
     if (value==numeroTel){
-        document.getElementById("boutonTelephone").addEventListener("click", appelNum);
+        document.getElementById("buttonTelephone").addEventListener("click", appelNum);
     }
     else{
-        document.getElementById("boutonTelephone").removeEventListener("click", appelNum);
+        document.getElementById("buttonTelephone").removeEventListener("click", appelNum);
     }
 }
 
