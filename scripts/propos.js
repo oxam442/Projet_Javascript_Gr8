@@ -58,8 +58,3 @@ function modal(number){
     mission.style.display="flex";
 }
 
-// permet de fermer la page popup
-function modalClose(){
-    document.getElementById("popupMission").style.display="none";
-}
-

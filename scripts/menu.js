@@ -2,7 +2,7 @@ function plagiat(){
     console.log("Attention au plagiat.");
 }
 
-// barre de recherche
+// menu
 function backgroundColor(lien){
     // change la couleur du fond
     lien.style.background="var(--primary-color)";
@@ -93,30 +93,38 @@ function horloge(){
 horloge();
 
 
-// telephone
+// Footer
 let numeroTel=null;
 function stockNum(numero){
     numeroTel= numero.dataset.tel;
 }
 
-function changeTel(){
-    let tel=document.getElementById("popupTelephone");
-    tel.style.display="flex";
-    tel.firstElementChild.firstElementChild.textContent=`Confirmer le numéro suivant ${numeroTel}.`;
+function changePageTel(){
+    let popup= document.getElementById("popupTelephone");
+    let content= `
+        <div class="popup">
+            <div id="buttonclose" onclick="modalClose()">X</div>
+            <div>Confirmer le numéro suivant ${numeroTel}.</div>
+            <input type="text" oninput="verificationNum()" id="value">
+            <audio id="audio" src=""></audio> 
+            <button id="boutonTelephone">Appeler</button>
+    `;
+    popup.innerHTML=content;
+    popup.style.display="flex";
 }
 
-function verificationTel(){
+function verificationNum(){
     let value=document.getElementById("value").value;
     if (value==numeroTel){
-        document.getElementById("boutonTelephone").addEventListener("click", appel);
+        document.getElementById("boutonTelephone").addEventListener("click", appelNum);
     }
     else{
-        document.getElementById("boutonTelephone").removeEventListener("click", appel)
+        document.getElementById("boutonTelephone").removeEventListener("click", appelNum);
     }
 }
 
 
-function appel(){
+function appelNum(){
     let audio = document.getElementById("audio");
     audio.play();
     setTimeout(()=>{
@@ -128,12 +136,10 @@ function appel(){
 }
 
 
-// permet de fermer la page popup
+// permet de fermer les pages popup
 function modalClose(){
     document.getElementById("popupMission").style.display="none";
     document.getElementById("popupTelephone").style.display="none";
     document.getElementById("popupConfirm").style.display="none";
     document.getElementById("menu").children[4].style.background="var(--dark-color)";
 }
-
-
