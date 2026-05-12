@@ -115,21 +115,23 @@ function verificationTel(){
     }
 }
 
+
 function appel(){
     let audio = document.getElementById("audio");
     audio.play();
     setTimeout(()=>{
         audio.pause();
+        document.getElementById("popupTelephone").style.display="none";
     },5000);
     console.log("vous appelez ce numéro : "+ numeroTel);
-
-    document.getElementById("popupTelephone").style.display="none";
+   
 }
 
 
 // permet de fermer la page popup
 function modalClose(){
     document.getElementById("popupMission").style.display="none";
+    document.getElementById("popupTelephone").style.display="none";
     document.getElementById("popupConfirm").style.display="none";
     document.getElementById("menu").children[4].style.background="var(--dark-color)";
 }
