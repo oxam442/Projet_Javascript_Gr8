@@ -47,7 +47,7 @@ function modal(number){
     let mission = document.getElementById("popupMission");
     // affichage de la popup
     let content= `
-        <div class="popupClass">
+        <div class="popup">
             <div id="buttonclose" onclick="modalClose()">X</div>
             <h2>${missionsData[number].title}</h2>
             <div>${missionsData[number].description}</div>
