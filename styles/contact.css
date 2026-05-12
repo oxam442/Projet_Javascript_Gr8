@@ -11,6 +11,16 @@
     border-radius: var(--border-radius);
 }
 
+/* @font-face {
+    font-family: MithycalPolice;
+    src: url(../images/MythicalPolice.ttf);
+}
+
+#nomContact, #messageContact, #mailContact {
+    font-family: MithycalPolice;
+    font-size: 25px;
+} */
+
 input{
     width: 50vw;
     height: 3vw;
