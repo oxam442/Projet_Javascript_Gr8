@@ -109,6 +109,7 @@ function changePageTel(){
             <audio id="audio" src="../son_appel.mp3"></audio> 
             <button id="buttonTelephone">Appeler</button>
             <div style="text-align:left; font-size:8px; font-style: italic; padding:2px">* ne pas mettre le son trop fort</div>
+        </div>
     `;
     popup.innerHTML=content;
     popup.style.display="flex";
@@ -141,6 +142,8 @@ function appelNum(){
 function modalClose(){
     document.getElementById("popupMission").style.display="none";
     document.getElementById("popupTelephone").style.display="none";
+    document.getElementById("popupAchat").style.display="none";
     document.getElementById("popupConfirm").style.display="none";
+    document.getElementById("popupError").style.display="none";
     document.getElementById("menu").children[4].style.background="var(--dark-color)";
 }

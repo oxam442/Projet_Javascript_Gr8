@@ -39,6 +39,8 @@
 }
 
 .box {
+    display:flex;
+    flex-direction:column;
     width: 125px; 
     height: 250px; 
     padding: 10px;
@@ -81,7 +83,7 @@ button {
 
 button:hover {
     transform: scale(1.05);
-} 
+}  
 
 
 /* achat */
@@ -99,7 +101,18 @@ button:hover {
 
 /* smiley */
 #popupSmiley {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    
+} 
 
+#popupError {
     display: none;
     justify-content: center;
     align-items: center;
