@@ -108,6 +108,7 @@ function changePageTel(){
             <input type="text" oninput="verificationNum()" id="value" placeholder="Numero à entrée">
             <audio id="audio" src="../son_appel.mp3"></audio> 
             <button id="buttonTelephone">Appeler</button>
+            <div style="text-align:left; font-size:8px; font-style: italic; padding:2px">* ne pas mettre le son trop fort</div>
     `;
     popup.innerHTML=content;
     popup.style.display="flex";
