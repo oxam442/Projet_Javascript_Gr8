@@ -95,12 +95,16 @@ horloge();
 
 // Footer
 let numeroTel=null;
+// fonction pour stocker le numero de téléphone
 function stockNum(numero){
     numeroTel= numero.dataset.tel;
 }
 
+// fonction pour afficher la page pour comfirmer l'appel
 function changePageTel(){
+    // recuperation id
     let popup= document.getElementById("popupTelephone");
+    // contenu à afficher
     let content= `
         <div class="popup">
             <div id="buttonclose" onclick="modalClose()">X</div>
@@ -111,10 +115,12 @@ function changePageTel(){
             <div style="text-align:left; font-size:8px; font-style: italic; padding:2px">* ne pas mettre le son trop fort</div>
         </div>
     `;
+    // affichage du contenu
     popup.innerHTML=content;
     popup.style.display="flex";
 }
 
+// fonction pour vérifier si le numéro est bon
 function verificationNum(){
     let value=document.getElementById("value").value;
     if (value==numeroTel){
@@ -125,11 +131,13 @@ function verificationNum(){
     }
 }
 
-
+// fonction pour appeler le numéro et l'afficher dans la console 
 function appelNum(){
     let audio = document.getElementById("audio");
+    // lance l'audio 
     audio.play();
     setTimeout(()=>{
+        // arrete l'audio 
         audio.pause();
         document.getElementById("popupTelephone").style.display="none";
     },5000);
@@ -138,7 +146,7 @@ function appelNum(){
 }
 
 
-// permet de fermer les pages popup
+// permet de fermer les pages popup 
 function modalClose(){
     document.getElementById("popupMission").style.display="none";
     document.getElementById("popupTelephone").style.display="none";

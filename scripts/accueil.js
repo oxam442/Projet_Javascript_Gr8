@@ -1,31 +1,41 @@
+// function pour afficher le slogan mot par mot
 function write(){
-    let thon =document.getElementById("slogan");
+    // recuperation id
+    let sloganId =document.getElementById("slogan");
+    // définition des variables 
     let cpt=0;
     let sloganText= 'Talk Walk Rwar';
     let text= sloganText.split(' ');
+    //  affichage mot par mot du slogan
     let time = setInterval(()=> {
         if (cpt<3){
-            thon.textContent+=text[cpt];
-            thon.textContent+=' ';
+            sloganId.textContent+=text[cpt];
+            sloganId.textContent+=' ';
             cpt++;
         }
         else {
+            // appel la fonction pour animer le slogan
             clearInterval(time);
             animation();
         }
     }, 1000);
 }
+// function pour animer le slogan
 function animation(){
-    let thon =document.getElementById("slogan");
+    // recuperation id
+    let sloganId =document.getElementById("slogan");
+    // définition des variables 
     let cpt=0;
-    let taille=[100, -100,0];
+    let taille=[100, -100,0]; // position pour faire bouger le slogan
+    // déplace le slogan de droite à gauche
     let time = setInterval(()=> {
         if (cpt<3){
-            thon.style.transform=`translateX(${taille[cpt++]}px)`;
+            sloganId.style.transform=`translateX(${taille[cpt++]}px)`;
         }
         else {
             clearInterval(time);
-            thon.textContent='';
+            sloganId.textContent='';
+            // appel la fonction pour afficher le slogan 
             write();
         }
     }, 1500);

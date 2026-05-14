@@ -45,7 +45,7 @@ const missionsData = {
 function modal(number){
     // récupération de l'id
     let mission = document.getElementById("popupMission");
-    // affichage de la popup
+    // conteun à afficher
     let content= `
         <div class="popup">
             <div id="buttonclose" onclick="modalClose()">X</div>
@@ -53,7 +53,7 @@ function modal(number){
             <div>${missionsData[number].description}</div>
         </div>
     `;
-    // afficher le contenu et le popup
+    // affichage du contenu
     mission.innerHTML=content;
     mission.style.display="flex";
 }
