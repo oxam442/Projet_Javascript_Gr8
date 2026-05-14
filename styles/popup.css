@@ -83,6 +83,41 @@
     
 }
 
+#popupAchat {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    
+}
+
+#popupSmiley {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    
+} 
+
+#popupError {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+} 
+
 /* Bouton pour le changement vers la page de l'equipe */
 #oui{
     width: 100%;

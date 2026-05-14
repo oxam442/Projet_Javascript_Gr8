@@ -40,42 +40,42 @@
         <form name="formContact">
             <h2>Formulaire de Contact</h2>
             <div>
-            <input type="text" id="nomContact" placeholder="Prénom Nom" oninput="azerty(), verif()">
+            <input type="text" id="nomContact" placeholder="Prénom Nom" oninput="nomVerif(), verifTotal()">
                 <div id="nomRule" style="color: red">
                     Le nom doit contenir exactement 2 mots séparés par un espace (Prénom Nom)
                 </div>
             </div> 
             <div>
-                <input type="text" id="mailContact" placeholder="email@exemple.com" oninput="qwerty(), verif()"> 
+                <input type="text" id="mailContact" placeholder="email@exemple.com" oninput="mailVerif(), verifTotal()"> 
                 <div id="mailRule" style="color: red">
                     L'email doit contenir un @ et un point
                 </div>
             </div>
             <div>
-                <textarea type="text" id="messageContact" placeholder="Votre message (1000 caractères maximum)" oninput="zqsd(), verif()"></textarea>
+                <textarea type="text" id="messageContact" placeholder="Votre message (1000 caractères maximum)" oninput="messageVerif(), verifTotal()"></textarea>
                 <div id="messageRule" style="color: red">
                     Minimum 20 caractères requis
                 </div>
-            </div>
+            </div> 
             <button id="submitButton" disabled onclick="jeu(event)">submit</button>
         </form>
     </div>
 
     <!-- Popup jeu -->
-    <div id="jeu">
+    <div id="popupJeu">
         <div class="popup">
-            <p>le jeu va commencer dans </p>
+            <div></div>
+            <div></div>
             <button id="jeuButton">click here</button>
         </div>
     </div>
-    <!-- popup win --> 
-    <div id="win">
+    <div id="popupWin">
         <div class="popup">
             <p>Gagné le formulaire a bien été envoyé</p>
         </div>
     </div>
     <!-- popup loose -->
-    <div id="loose">
+    <div id="popupLoose">
         <div class="popup">
             <p>Perdu le formulaire va se réinitialiser</p>
         </div>
