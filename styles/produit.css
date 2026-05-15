@@ -3,21 +3,18 @@
     color: white; 
     background: linear-gradient(
         to right,
-        #e96b0b,
-        #e9510b  
+        var(--primary-color),
+        var(--accent-color)  
     );
     font-family: Arial;
     border-radius: 6px;
     padding: 10px 16px;
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
 } 
 
 #nomSection {
-    /* texte en gras */ 
     font-weight: bold;
-    /* taille du texte */
     font-size: 20px;
 }
 
@@ -25,15 +22,81 @@ h3{
     text-align: center;
 }
 
+/* filter section */
+#filter {
+    background-color: var(--light-color);
+    padding: 25px;
+    max-width: 1200px;
+    margin: 30px auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 0 10%;
+}
+ 
+#filter h2 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+ 
+#filter form div {
+    margin-bottom: 15px;
+}
+ 
+#filter input,
+#filter select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    margin-right: 10px;
+}
+ 
+#filter input:focus,
+#filter select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+ 
+/* filter buttons */
+#afficher {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+ 
+#Appliquer,
+#Reinitialiser {
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+}
+ 
+#Appliquer {
+    background-color: var(--primary-color);
+    color: white;
+}
+ 
+#Appliquer:hover {
+    transform: scale(1.05);
+}
+ 
+#Reinitialiser {
+    background-color: var(--secondary-color);
+    color: white;
+}
 
-/* Itemframe */
 .container {
     display: flex;
     justify-content: center; 
     margin: 20px;
     gap: 20px;
     padding: 20px;
-    /* retour à la ligne s'il n'y a plus de place sur la ligne */
     flex-wrap: wrap;
 }
 
@@ -61,26 +124,29 @@ h3{
     background-color: #6b6f8e;
 }
 
+.box:hover {
+    transform: translateY(-5px);
+}
+
 #prix {
     font-weight: bold;
-    color: #e96b0b;
+    color: var(--primary-color);
     margin-bottom: 10px;
 }
 
 button {
-    width: 100%;
+    width: 75%;
     padding: 12px;
-    margin-bottom: 5px;
+    margin: 0 auto;
     border-radius: 15px;
     font-weight: bold;
     color: white;
     border: none;
     font-size: 15px;
-    background: #e96b0b;
-    transition: 0.5s;
+    background: var(--primary-color);
+    transition: var(--transition);
 }
 
 button:hover {
     transform: scale(1.05);
-}  
-
+}

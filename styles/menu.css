@@ -131,4 +131,10 @@ h3 {
     padding: 0 10%;
 }
 
-
+.box{
+    background-color: var(--light-color);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}

@@ -1,28 +1,41 @@
-.container {
-    display: flex;
-    justify-content: center; 
-    margin: 20px;
-    gap: 20px;
-    padding: 20px;
-    /* retour à la ligne s'il n'y a plus de place sur la ligne */
-    flex-wrap: wrap;
+/* api container */
+.apiContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 10%;
 }
-
-.box {
-    width: 300px; 
-    height: 300px; 
-    padding: 10px;
-    font-size: 15px; 
-    background: #f4f5fb;
-    border: 1px solid rgba(0,0,0,0.05);
-    border-radius: 15px;
-    color: #1e293b;
-    transition: all 0.2s; 
-    font-family: Arial;    
-    overflow: hidden;
+ 
+/* api card */
+.api {
+    background-color: var(--light-color);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+    font-size: 90%;
 }
-
-.map{
-    height: 200px;
+ 
+.api:hover {
+    transform: translateY(-5px);
+}
+ 
+.api > div:first-child {
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+ 
+/* map */
+.map {
     width: 100%;
+    height: 200px;
+    border-radius: var(--border-radius);
+    margin: 10px 0;
+    cursor: pointer;
+    background-color: #ddd;
 }
