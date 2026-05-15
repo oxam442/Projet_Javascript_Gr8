@@ -62,6 +62,7 @@ function comparePrice(min, max, price){
         return true;
     }
     else {
+        console.log("Le prix est incorrect");
         return false;
     }
 }
@@ -73,6 +74,7 @@ function compareWord(word, product){
         return true;
     }
     else {
+        console.log("Le nom du produit ou service cherché est incorrect.");
         return false;
     } 
 }
@@ -103,7 +105,7 @@ function afficherItemFrame(number,id){
     itemframe.innerHTML=content;
     itemframe.style.display="flex";
 
-}
+} 
 
 // Fonction pour afficher le message d'erreur lorsque les filtres ne fonctionnent pas
 function messageError(){
@@ -113,7 +115,7 @@ function messageError(){
     let content=`       
     <div class="popup">
         <div id="buttonclose" onclick="modalClose()">X</div>
-            <p>pas de produit trouvé</p>
+            <p>Aucun produits ou services trouvés</p>
     </div>`;
     // affichage du contenu
     popup.innerHTML=content;

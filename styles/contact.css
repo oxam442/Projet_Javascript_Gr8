@@ -7,12 +7,17 @@
     font-size: 15px;
     box-shadow: var(--shadow);
     width: 38vw;
-    height: 34vw;
+    padding: 40px;
     border-radius: var(--border-radius);
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
 input{
-    width: 50vw;
+    width: 50vw; 
     height: 3vw;
 } 
 textarea{
@@ -30,9 +35,6 @@ textarea{
 }
 
 #submitButton{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;    
     width: 30%;
     padding: 12px;
@@ -43,6 +45,7 @@ textarea{
     border: none;
     font-size: 20px;
     transition:var(--transition);
+    margin: 10px;
 }
 
 #submitButton:hover {

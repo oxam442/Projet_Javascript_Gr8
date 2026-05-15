@@ -36,7 +36,6 @@
     <h1>Contact</h1>
     <!-- formulaire --> 
     <div class="container">
-        
         <form name="formContact">
             <h2>Formulaire de Contact</h2>
             <div>
@@ -57,10 +56,10 @@
                     Minimum 20 caractères requis
                 </div>
             </div> 
-            <button id="submitButton" disabled onclick="jeu(event)">submit</button>
+            <div class="button-container"><button id="submitButton" disabled onclick="jeu(event)">Submit</button></div>
         </form>
     </div>
-
+ 
     <!-- Popup jeu -->
     <div id="popupJeu">
         <div class="popup">
@@ -71,13 +70,15 @@
     </div>
     <div id="popupWin">
         <div class="popup">
-            <p>Gagné le formulaire a bien été envoyé</p>
+            <p>Vous avez gagné</p>
+            <p>Le formulaire a bien été envoyé.</p>
         </div>
     </div>
     <!-- popup loose -->
     <div id="popupLoose">
         <div class="popup">
-            <p>Perdu le formulaire va se réinitialiser</p>
+            <p>Vous avez perdu</p>
+            <p>Le formulaire va se réinitialiser.</p>
         </div>
     </div>
 

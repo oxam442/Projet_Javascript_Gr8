@@ -26,9 +26,9 @@ let lon=0;
 let lat=0;
 
 // fonction pour afficher la carte et la position de chaque ville avec leaflet
-function map(nom,latitude, longitude){
+function map(nom,latitude, longitude, number){
     // setup la carte 
-    var map = L.map('map'+ nom).setView([47.996655422448725, 0.20076435392140918],6);
+    var map = L.map('map'+ nom).setView([ville[number].lat, ville[number].lon],6);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
     // affiche la position de l'école grace à un pointeur
     L.marker([latitude, longitude]).addTo(map).bindPopup('ISEN '+ nom);
@@ -49,7 +49,7 @@ function distance(number){
     // calcul la distance en km
     let distance=p1.distanceTo(p2)/1000;
     // affiche la distance 
-    document.getElementById("api"+ville[number].nom).children[3].textContent=`la distance est de : ${distance} km`;
+    document.getElementById("api"+ville[number].nom).children[3].textContent=`La distance est de : ${distance} km`;
 }
 
 // function main pour appliquer chaque fonction pour les 5 écoles
@@ -57,7 +57,7 @@ function main(){
     for (let i=0;i<ville.length;i++){
         let v=ville[i];
         weather(ville[i].nom,ville[i].lat,ville[i].lon);
-        map(ville[i].nom,ville[i].lat,ville[i].lon);
+        map(ville[i].nom,ville[i].lat,ville[i].lon,i);
     }
 }
 main();

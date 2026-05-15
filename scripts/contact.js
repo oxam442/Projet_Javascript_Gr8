@@ -18,6 +18,7 @@ function nomVerif(){
     // cas où il y a une erreur
     else{
         id.style.border="2px solid red";
+        console.log("Le nom doit contenir exactement 2 mots séparés par un espace (Prénom Nom)");
         document.getElementById("nomRule").style.display="flex";
         return false;
     }
@@ -44,6 +45,7 @@ function mailVerif(){
     else{
         document.getElementById("mailRule").style.display="flex";
         id.style.border="2px solid red";
+        console.log("L'email doit contenir un @ et un point");
         return false;
     }
 }
@@ -67,6 +69,7 @@ function messageVerif(){
     else {
         document.getElementById("messageRule").style.display="flex";
         id.style.border="2px solid red";
+        console.log("Minimum 20 caractères requis");
         return false;
     }
 }
@@ -77,7 +80,7 @@ function verifTotal(){
         document.getElementById("submitButton").style.background="var(--primary-color)";  
         document.getElementById("submitButton").disabled=false;
     }
-    else{
+    else{ 
         document.getElementById("submitButton").style.background="var(--secondary-color)";
         document.getElementById("submitButton").disabled=true;
     } 

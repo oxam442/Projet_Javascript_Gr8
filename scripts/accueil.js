@@ -1,7 +1,7 @@
 // function pour afficher le slogan mot par mot
 function write(){
     // recuperation id
-    let sloganId =document.getElementById("slogan");
+    let sloganId =document.getElementById("slogan").children[0];
     // définition des variables 
     let cpt=0;
     let sloganText= 'Talk Walk Rwar';
@@ -23,7 +23,7 @@ function write(){
 // function pour animer le slogan
 function animation(){
     // recuperation id
-    let sloganId =document.getElementById("slogan");
+    let sloganId =document.getElementById("slogan").children[0];
     // définition des variables 
     let cpt=0;
     let taille=[100, -100,0]; // position pour faire bouger le slogan
@@ -39,5 +39,5 @@ function animation(){
             write();
         }
     }, 1500);
-}
+} 
 write();
