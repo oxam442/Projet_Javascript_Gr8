@@ -35,44 +35,29 @@ function changePage(event,page){
     },2000);
 }
 
-function changeEquipeConfirm(event){
-    event.preventDefault();
-    // affiche le popup
-    let popup= document.getElementById("popupConfirm");
-        let content= `
-        <div class="popup">
-            <div id="buttonclose" onclick="modalClose()">X</div>
-            <p>Voulez-vous aller vers cette page ?</p>
-            <a href="equipe.html">
-                <button id="oui" onclick="changePageEquipe(event,this), backgroundColor(this)">OUI</button>
-            </a>
-        </div>
-    `;
-    popup.innerHTML=content;
-    popup.style.display="flex";
-}
-
-function changePageEquipe(event,page){
+function changeEquipe(event,page){
     // bloque la page pour l'instant
     event.preventDefault();
-    // cache la page de confirmation
-    document.getElementById("popupConfirm").style.display="none";
     // récupère le lien de la prochaine page
-    let url = page.parentElement.href;
+    let url = page.href;
     // affiche le loader et le popup
     let popup= document.getElementById("popupLoader");
-        let content= `
+    let content= `
         <div class="popup">
             <p>Chargement en cours...</p>
             <div class="loader"></div>
         </div>
     `;
     popup.innerHTML=content;
-    popup.style.display="flex";
     // attend 2 seconde pour passer à la prochaine page
-    setTimeout(()=>{
-        window.location.href=url;
-    },2000);
+    if (confirm("Voulez-vous allez vers cette page ?")){
+        popup.style.display="flex";
+        backgroundColor(page);
+        setTimeout(()=>{
+            window.location.href=url;
+        },2000);
+    }
+
 }
 
 // horloge
@@ -146,12 +131,19 @@ function appelNum(){
 }
 
 
-// permet de fermer les pages popup 
+// permet de fermer les popup 
 function modalClose(){
-    document.getElementById("popupMission").style.display="none";
     document.getElementById("popupTelephone").style.display="none";
-    document.getElementById("popupAchat").style.display="none";
-    document.getElementById("popupConfirm").style.display="none";
-    document.getElementById("popupError").style.display="none";
     document.getElementById("menu").children[4].style.background="var(--dark-color)";
+    if (document.title == "Produits/services - CoWalkZilla"){
+        document.getElementById("popupError").style.display="none";
+        document.getElementById("popupAchat").style.display="none";
+    }
+    if(document.title == "Équipe - CowalkZilla"){
+        document.getElementById("popupAddMember").style.display="none";
+        document.getElementById("popupModifMember").style.display="none";
+    }
+    if(document.title == "À propos - CoWalkZilla"){
+        document.getElementById("popupMission").style.display="none";
+    }
 }

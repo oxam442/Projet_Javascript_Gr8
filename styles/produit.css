@@ -112,10 +112,10 @@ form{
     flex-direction:column;
     padding: 10px;
     font-size: 15px; 
-    background-color: #f4f5fb;
+    background-color: var(--light-color);
     border: 1px solid rgba(0,0,0,0.05);
     border-radius: 15px;
-    color: #1e293b;
+    color: var(--text-color);
     transition: all 0.2s; 
     font-family: Arial; 
     max-width: 300px;  

@@ -11,7 +11,7 @@
     <link href="https://fonts.cdnfonts.com/css/digital" rel="stylesheet">
 
     <!-- fichier js -->
-    <script src="../scripts/produit.js" defer></script>
+    <script src="../scripts/equipe.js" defer></script>
     <script src="../scripts/menu.js" defer></script>
     
     <!-- titre -->
@@ -29,34 +29,35 @@
             <a href="accueil.html" onclick="changePage(event,this), backgroundColor(this)">ACCUEIL</a>
             <a href="propos.html" onclick="changePage(event,this), backgroundColor(this)">A PROPOS</a>
             <a href="produit.html" onclick="changePage(event,this), backgroundColor(this)">PRODUITS/SERVICES</a>
-            <a href="equipe.html" onclick="changeEquipeConfirm(event)">EQUIPE</a>
+            <a href="equipe.html" onclick="changeEquipe(event,this)">EQUIPE</a>
             <a href="contact.html" onclick="changePage(event,this), backgroundColor(this)">CONTACT</a>
             <a href="api.html" onclick="changePage(event,this), backgroundColor(this)">NOUS TROUVER</a>
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" id="horloge" target="_blank"></a>
         </div>
     </header>
 
+    
     <section class="equipe-header">
         <div>
             <h1>Notre Équipe</h1>
-            <p class="subtitle">Les talents qui font rugir CowalkZilla</p>
-            <button id="edit-mode">Mode Édition</button>
+            <h3>Les talents qui font rugir CowalkZilla</h3>
+            <button id="edit-mode" onclick="toggleMode()">Mode Édition</button>
         </div>
-    </section>
+    </section> 
 
     <section class="equipe">
-        <div class="equipe-grid"><!-- Les cartes seront générées dynamiquement --></div>
-        <button id="add-member" style="display: none;">Ajouter un membre</button>
+        <div class="equipe-grid" id="equipe"><!-- Les cartes seront générées dynamiquement -->
+        </div>
+        <button id="add-member" onclick="popupAddDisplay()">Ajouter un membre</button>
     </section>
-    <div class="form-add-member">
-    </div>
 
-
+    <!-- à revoir -->
+    <div id="container"></div>
     <!-- Popup -->
-    <div id="popupMission"></div>
     <div id="popupLoader"></div>
-    <div id="popupConfirm" ></div>
     <div id="popupTelephone"></div>
+    <div id="popupAddMember"></div>
+    <div id="popupModifMember"></div>
 
     <footer>
         <table id="footer">

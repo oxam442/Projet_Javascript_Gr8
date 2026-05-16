@@ -1,0 +1,77 @@
+.equipe-grid{
+    display: flex;
+    justify-content: center; 
+    margin: 20px;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.equipe-card{
+    display:flex;
+    flex-direction:column;
+    padding: 10px;
+    background-color: var(--light-color);
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 15px;
+    color: var(--text-color);
+    transition: all 0.2s; 
+    max-width: 300px;  
+    box-shadow: var(--shadow);
+    text-align: left;
+    align-items:left;
+}
+
+.img {
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: var(--border-radius);
+    background-color: #6b6f8e;
+}
+
+.equipe-nom{
+    font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.equipe-fonction{
+    font-size: 15px;
+    font-weight: bolder;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.equipe-mail{
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.equipe{
+    background-color: white;
+}
+
+#edit-mode{
+    background-color: var(--secondary-color);
+}
+
+#add-member{
+    background-color: var(--primary-color);
+    display: none;
+}
+
+/* à revoir */
+.scratch {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+}
+
+.scratch canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
