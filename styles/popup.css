@@ -129,21 +129,5 @@
     position: fixed;
 } 
 
-/* Bouton pour le changement vers la page de l'equipe */
-#oui{
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 5px;
-    border-radius: 15px;
-    font-weight: bold;
-    color: var(--text-color);
-    border: none;
-    font-size: 15px;
-    background: green;
-    transition: var(--transition);
-}
 
-#oui:hover{
-    transform: scale(1.05);
-}
 

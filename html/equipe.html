@@ -37,22 +37,26 @@
     </header>
 
     
-    <section class="equipe-header">
+    <section>
         <div>
             <h1>Notre Équipe</h1>
-            <h3>Les talents qui font rugir CowalkZilla</h3>
+            <div class="equipe-header">
+                <h3>Les talents qui font rugir CowalkZilla</h3>
             <button id="edit-mode" onclick="toggleMode()">Mode Édition</button>
+            </div>
+
         </div>
     </section> 
 
     <section class="equipe">
         <div class="equipe-grid" id="equipe"><!-- Les cartes seront générées dynamiquement -->
         </div>
-        <button id="add-member" onclick="popupAddDisplay()">Ajouter un membre</button>
+        <div class="add-member">
+            <button id="add-member" onclick="popupAddDisplay()">Ajouter un membre</button>
+        </div>
+        
     </section>
 
-    <!-- à revoir -->
-    <div id="container"></div>
     <!-- Popup -->
     <div id="popupLoader"></div>
     <div id="popupTelephone"></div>

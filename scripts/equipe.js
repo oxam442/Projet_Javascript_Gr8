@@ -1,7 +1,7 @@
 // base de donnée
 const equipe = [
-    {id:"acv",nom:"Adrien Chambrier Vitre",fonction:"Co-fondateur & programmeur", adresse:"adrien.chambrier-vitre@isen-ouest.yncrea.fr", description:""},
-    {id:"tt",nom:"Thimothé Tran",fonction:"Co-fondateur & designer", adresse:"thimothe.tran@isen-ouest.yncrea.fr", description:""}
+    {id:"acv",nom:"Adrien Chambrier Vitre",fonction:"Co-fondateur & programmeur", adresse:"adrien.chambrier-vitre@isen-ouest.yncrea.fr", description:"", img:"../images/acv.jpg"},
+    {id:"tt",nom:"Thimothé Tran",fonction:"Co-fondateur & designer", adresse:"thimothe.tran@isen-ouest.yncrea.fr", description:"", img:"../images/tt.jpg"}
 ]
 let isAdmin=false;
 
@@ -15,7 +15,7 @@ function displayCard(){
         let content=`            
         <div class="equipe-card" id="${equipe[i].id}" >
             <div class="scratch-zone">
-                <img src="../images/logo.png">
+                <img src="${equipe[i].img}">
                 <canvas class="scratch"></canvas>
             </div>
             <div class="equipe-nom" onclick="popupModifName(this)" style="cursor:pointer">${equipe[i].nom}</div>
@@ -46,7 +46,7 @@ function popupAddDisplay(){
             <div>Rôle</div>
             <input type="text" placeholder="Rôle" id="newRole">
             <div>Email</div>
-            <input type="text" placeholder="email@exemple.com" id="newMail">
+            <input type="text" placeholder="email@exemple.com" id="newMail"><br>
             <button id="ajouter" onclick="addCard()">ajouter</button>
         </div>`;
     // affichage du contenu et de la popup
@@ -75,7 +75,9 @@ function addCard(){
             <div class="equipe-nom" onclick="popupModifName(this)">${name}</div>
             <div class="equipe-fonction">${role}</div>
             <div class="equipe-mail">${mail}</div>
-            <button class="buttonSup" onclick="supCard(this)">spprimer</button>
+            <div class="add-member">
+                <button class="buttonSup" onclick="supCard(this)">spprimer</button>
+            </div>
         </div>
         `;
     // ajout du contenu après les autres cartes
@@ -159,7 +161,7 @@ function passToUser(){
 
 // fonction pour supprimer un carte
 function supCard(id){
-    id.parentElement.remove();
+    id.parentElement.parentElement.remove();
 }
 
 // fonction pour initialiser la zone de grattage
@@ -171,7 +173,7 @@ function initScratch(canvas){
     canvas.height=canvas.offsetHeight;
     // couche de grattage ajoutée au-dessus de l'image
     context.globalCompositeOperation = "source-over";
-    context.fillStyle="red";
+    context.fillStyle="gray";
     context.fillRect(0,0,canvas.width,canvas.height);
     // ajout de la fonction sur la souris pour effacer la zone lorqu'elle est au-dessus de la zone
     canvas.onmousemove = position=>{
