@@ -5,26 +5,38 @@ const equipe = [
 ]
 let isAdmin=false;
 
+// fonction pour afficher les cartes de base
 function displayCard(){
+    // récpuration id
     let id=document.getElementById("equipe");
+    // boucle pour afficher les 2 cartes
     for(let i=0;i<2;i++){
+        // contenu à afficher
         let content=`            
         <div class="equipe-card" id="${equipe[i].id}" >
-                <img src="../images/logo.png" class="img">
-                <canvas class="scratch" width="300" height="300"></canvas>
+            <div class="scratch-zone">
+                <img src="../images/logo.png">
+                <canvas class="scratch"></canvas>
+            </div>
             <div class="equipe-nom" onclick="popupModifName(this)" style="cursor:pointer">${equipe[i].nom}</div>
             <div class="equipe-fonction">${equipe[i].fonction}</div>
             <div class="equipe-mail">${equipe[i].adresse}</div>
             <div>${equipe[i].description}</div>
         </div>
         `;
+        // ajout du contenu
         id.innerHTML+=content;
     }
 }
+// lancement des fonctions
 displayCard();
+document.querySelectorAll(".scratch-zone canvas").forEach(initScratch);
 
+// fonction pour renseigner les information pour ajouter une carte
 function popupAddDisplay(){
+    // recuperation id
     let id = document.getElementById("popupAddMember");
+    // contenu à afficher
     let content=`
         <div class="popup">
             <div id="buttonclose" onclick="modalClose()">X</div>
@@ -37,57 +49,73 @@ function popupAddDisplay(){
             <input type="text" placeholder="email@exemple.com" id="newMail">
             <button id="ajouter" onclick="addCard()">ajouter</button>
         </div>`;
+    // affichage du contenu et de la popup
     id.innerHTML=content;
     id.style.display="flex";
 }
 
+// fonction pour ajouter un carte en fonction des information rentré dans le popup
 function addCard(){
+    // recuperation id
     let id=document.getElementById("equipe");
     let popup=document.getElementById("popupAddMember");
+    // /cache le popup pour récuperer les infos 
     document.getElementById("popupAddMember").style.display="none";
+    // déclaration de variable
     let name = document.getElementById("newName").value;
     let role = document.getElementById("newRole").value;
     let mail = document.getElementById("newMail").value;
+    // contenu à afficher
     let content=`            
         <div class="equipe-card" id="">
-            <div class="scratch">
-                <img src="../images/logo.png" width="300" height="300">
-                <canvas width="300" height="300"></canvas>
+            <div class="scratch-zone">
+                <img src="../images/logo.png">
+                <canvas class="scratch"></canvas>
             </div>
-            <img src="../images/logo.png" class="img">
-            <canvas class="scratch" width="300" height="300"></canvas>
             <div class="equipe-nom" onclick="popupModifName(this)">${name}</div>
             <div class="equipe-fonction">${role}</div>
             <div class="equipe-mail">${mail}</div>
             <button class="buttonSup" onclick="supCard(this)">spprimer</button>
         </div>
         `;
-    id.innerHTML+=content;
+    // ajout du contenu après les autres cartes
+    id.insertAdjacentHTML("beforeend", content);
+    // ajout de la fonction de grattage 
+    setTimeout(()=>{
+        let canvas=id.querySelectorAll(".scratch-zone canvas");
+        initScratch(canvas[canvas.length-1],0);
+    })
 }
 
+// fonction pour modifier le nom
 let currentElement = null;
 function popupModifName(element){
     currentElement=element;
-    let id = document.getElementById("popupModifMember");
-    let content=`
+    // si on est en mode edit ou non
+    if (isAdmin){
+        // recuperation id
+        let id = document.getElementById("popupModifMember");
+        // contenu à afficher
+        let content=`
         <div class="popup">
             <div id="buttonclose" onclick="modalClose()">X</div>
             <h3>Modification du nom complet</h3>
             <input type="text" placeholder="Prenom Nom" id="nameModif">
             <button id="ajouter" onclick="modifName()">Modifier</button>
         </div>`;
-    id.innerHTML=content;
-    if (isAdmin){
+        // affichage du contenu et de la popup
+        id.innerHTML=content;
         id.style.display="flex";
     }
-    
 }
 
+// fonction pour modifier le nom
 function modifName(){
     document.getElementById("popupModifMember").style.display="none";
     currentElement.textContent=document.getElementById("nameModif").value;
 }
 
+// fonction pour passe du mode admin au mode user dans les 2 sens 
 function toggleMode(){
     if (!isAdmin){
         passToAdmin();
@@ -99,11 +127,16 @@ function toggleMode(){
     }
 }
 
+// fonction pour passer en mode admin
 function passToAdmin(){
+    // test du nom utilisateur 
     let userName = prompt("Entrez le nom du profil administrateur :");
     if (userName=="admin"){
+        // test du mot de passe
         let pwd = prompt("Entrez le mot de passe du profil administrateur :");
+        
         if (pwd=="admin_pwd"){
+            // passage en mode admin
             document.getElementById("add-member").style.display="flex";
             document.getElementById("edit-mode").style.backgroundColor="var(--primary-color)";
             isAdmin=true;
@@ -117,61 +150,43 @@ function passToAdmin(){
     }
 }
 
+// fonction pour passer en mode user
 function passToUser(){
     document.getElementById("add-member").style.display="none";
     document.getElementById("edit-mode").style.backgroundColor="var(--secondary-color)";
     isAdmin=false;
 }
 
+// fonction pour supprimer un carte
 function supCard(id){
     id.parentElement.remove();
 }
 
+// fonction pour initialiser la zone de grattage
+function initScratch(canvas){
+    // définition de l'espace de dessin
+    const context =canvas.getContext("2d");
+    // application de la taille de l'image au canvas
+    canvas.width=canvas.offsetWidth;
+    canvas.height=canvas.offsetHeight;
+    // couche de grattage ajoutée au-dessus de l'image
+    context.globalCompositeOperation = "source-over";
+    context.fillStyle="red";
+    context.fillRect(0,0,canvas.width,canvas.height);
+    // ajout de la fonction sur la souris pour effacer la zone lorqu'elle est au-dessus de la zone
+    canvas.onmousemove = position=>{
+        const rect = canvas.getBoundingClientRect();
+        // définition de la position de la souris 
+        const x = (position.clientX-rect.left)*(canvas.width/rect.width);
+        const y = (position.clientY-rect.top)*(canvas.height/rect.height);
 
-// à revoir
-const images = [
-    "../images/logo.png",
-    "../images/logo.png",
-    "../images/logo.png"
-];
+        // passage en mode gommage 
+        context.globalCompositeOperation="destination-out";
 
-let container = document.getElementById("container");
-
-/* =========================
-   1. CREATE BOXES
-========================= */
-for (let i = 0; i < images.length; i++) {
-
-    let box = document.createElement("div");
-    box.className = "scratch";
-
-    let img = document.createElement("img");
-    img.src = images[i];
-    img.width = 300;
-    img.height = 200;
-
-    let canvas = document.createElement("canvas");
-    canvas.width = 300;
-    canvas.height = 200;
-
-    box.appendChild(img);
-    box.appendChild(canvas);
-    container.appendChild(box);
-
-    /* =========================
-       2. SCRATCH INIT
-    ========================= */
-    let ctx = canvas.getContext("2d");
-
-    ctx.fillStyle = "gray";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    canvas.onmousemove = (e) => {
-
-        ctx.globalCompositeOperation = "destination-out";
-
-        ctx.beginPath();
-        ctx.arc(e.offsetX, e.offsetY, 15, 0, Math.PI * 2);
-        ctx.fill();
+        // definition de la forme pour effacer (un cercle)
+        context.beginPath();
+        context.arc(x,y,30,0,2*Math.PI);
+        context.fill();
     };
 }
+
