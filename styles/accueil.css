@@ -1,4 +1,4 @@
-#menu a img:hover {
+img:hover {
     transform: scale(2);
 }
 
@@ -15,7 +15,7 @@
     object-fit: cover;
     display: block;
 }
- 
+
 /* slogan */
 #slogan {
     background-color: var(--dark-color);
