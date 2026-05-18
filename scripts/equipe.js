@@ -1,7 +1,7 @@
 // base de donnée
 const equipe = [
     {id:"acv",nom:"Adrien Chambrier Vitre",fonction:"Co-fondateur & programmeur", adresse:"adrien.chambrier-vitre@isen-ouest.yncrea.fr", description:"", img:"../images/acv.jpg"},
-    {id:"tt",nom:"Thimothé Tran",fonction:"Co-fondateur & designer", adresse:"thimothe.tran@isen-ouest.yncrea.fr", description:"", img:"../images/tt.jpg"}
+    {id:"tt",nom:"Timothé Tran",fonction:"Co-fondateur & designer", adresse:"thimothe.tran@isen-ouest.yncrea.fr", description:"", img:"../images/tt.jpg"}
 ]
 let isAdmin=false;
 
