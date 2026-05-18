@@ -129,7 +129,7 @@ function jeu(event){
             // affiche le nombre de click par seconde dans la console 
             console.log(cps);
             // afficher le message gagné si la condition est vérifié soit un cps de 8
-            if(cps>8){
+            if(cps>1){
                 document.getElementById("popupJeu").style.display="none";
                 document.getElementById("popupWin").style.display="flex";
                 setTimeout(()=>{
